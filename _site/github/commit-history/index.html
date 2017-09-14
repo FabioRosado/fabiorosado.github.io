@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/021da17a9a.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css"  />
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="shortcut icon" href="/assets/images/FR.svg" width="16" heigth="16">
+
+
+  <link rel="alternate" type="application/rss+xml" title="Fabio Rosado" href="/feed.xml">
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+  <nav class="navbar">
+    <a class="navbar-brand" href="http://localhost:4000">
+      <img src="http://localhost:4000/assets/images/FR.svg" width="30" height="30" class="d-inline-block align-top" alt="FabioRosado">
+    </a>
+    <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+
+    
+      
+    
+      
+          <li class="nav-item">
+              <a class="nav-link" href="/about/"> About</a>
+          </li>
+      
+    
+      
+          <li class="nav-item">
+              <a class="nav-link" href="/blog/"> Blog</a>
+          </li>
+      
+    
+      
+          <li class="nav-item">
+              <a class="nav-link" href="/projects/"> Projects</a>
+          </li>
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+  </nav>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+
+        <div class="wrapper">
+ <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+   <header class="post-header">
+     <h1 class="post-title" itemprop="name headline">Commit history</h1>
+     <h3 class="text-muted"> How to keep it under control</h3>
+     <p class="post-meta">
+       <time datetime="2017-10-11T10:01:02+01:00" itemprop="datePublished">
+         
+           <i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;Wednesday, 11 Oct 2017 &emsp;
+       </time>
+
+       <i class="fa fa-user-o" aria-hidden="true"></i>
+         <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">&nbsp;FabioRosado &emsp;</span></span>
+       <i class="fa fa-folder-o" aria-hidden="true"></i> &nbsp;GitHub
+     </p>
+
+   </header>
+
+   <div class="post-content" itemprop="articleBody">
+     <p>If you are just starting using GitHub and contributing to Open Source you might come to a point in which you have a massive commit history. With each new contribution, commits and pushes will get recorded on your own fork. If your contibution gets accepted and a project maintainer merges your Pull Request into the main repo, your commits will still appear on your own fork.</p>
+
+<p>If the project you are contributing to is a small project and most changes are made by one or two persons, chances are that you won’t create any conflicts while subimiting a Pull Request, so you keep on going on this cycle until one day you wonder why the heck you have a bunch of commits on your history.</p>
+
+<p>At this point you might google a way to keep your commits down and you will probably read about <code class="highlighter-rouge">git rebase</code>. You might even start rebasing your commits to keep them down and either you fix the issue or everything seems to be messed up as you touched other contributors commits as well.</p>
+
+<p>I was sitting on a 44 commit history, wondering why the hell all my commits were showing every time I did a new Pull Request. But since only the last changes where being included on the Pull Request I kept on going. Eventually I learned how to fix this issue and why this was happening.</p>
+
+<p> </p>
+<h4 id="git-rebase">Git Rebase</h4>
+<hr />
+<p> </p>
+
+<p> </p>
+<h4 id="git-pull">Git Pull</h4>
+<hr />
+<p> </p>
+
+<p> </p>
+<h4 id="the-solution">The Solution</h4>
+<hr />
+<p> </p>
+
+   </div>
+
+   <div>
+       <hr></br>
+       <div class="row">
+           <div class="col-md-3">
+             <h5>Share this on: </h5>
+           </div>
+           <div class="col">
+             <a href="https://twitter.com/intent/tweet?text=Commit history&url=http://localhost:4000/github/commit-history/&via=@FabioRosado_&related=@FabioRosado_" rel="nofollow" target="_blank" title="Share on Twitter">
+               <button type="button" class="btn btn-info btn-sm"><i class="fa fa-twitter fa-share" aria-hidden="true"></i> Twitter</button></a>
+             <a href="https://facebook.com/sharer.php?u=http://localhost:4000/github/commit-history/" rel="nofollow" target="_blank" title="Share on Facebook">
+               <button type="button" class="btn btn-primary btn-sm"> <i class="fa fa-facebook fa-share" aria-hidden="true"></i> Facebook</button></a>
+             <a href="https://plus.google.com/share?url=http://localhost:4000/github/commit-history/" rel="nofollow" target="_blank" title="Share on Google+">
+               <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-google-plus fa-share" aria-hidden="true"></i> Google+</button></a>
+             <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/github/commit-history/&title=Commit history" rel="nofollow" target="_blank" title="Share on Linkedin">
+               <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-linkedin fa-share" aria-hidden="true"></i> Linkedin</button></a>
+           </div>
+       </div>
+        </br>
+   </div>
+   <div>
+     <hr></br></br>
+      <div clas="row">
+        <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            function disqus_config() { this.experiment.enable_scroll_container = true; }
+            var disqus_shortname = "fabiorosado"; // required: replace example with your forum shortname
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+     </div>
+   </div>
+ </article>
+
+</div>
+
+
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <img src="http://localhost:4000/assets/images/FR.svg" width="100" height="100" alt="FabioRosado">
+      </div>
+      <div class="col-3">
+        <h2 class="footer-heading"> Pages</h2>
+          <ul class="contact-list">
+              <li><a href="http://localhost:4000"> Home </a> </li>
+              
+                  
+              
+                  
+                      <li><a href="/about/"> About </a></li>
+                  
+              
+                  
+                      <li><a href="/blog/"> Blog </a></li>
+                  
+              
+                  
+                      <li><a href="/projects/"> Projects </a></li>
+                  
+              
+          </ul>
+      </div>
+      <div class="col-4">
+        <h2 class="footer-heading"> Latest Posts</h2>
+          <ul class="contact-list">
+              
+                 
+                       <li><a href="/github/commit-history/"> Commit history </a></li>
+                 
+              
+                 
+                       <li><a href="/code%20adventures/hacktoberfest/"> Hacktoberfest </a></li>
+                 
+              
+                 
+                   
+              
+                 
+                   
+              
+          </ul>
+      </div>
+      <div class="col-3">
+       <h2 class="footer-heading"> Contact</h2>
+       <ul class="contact-list">
+         <li>Please feel free to contact me, I'm always happy to chat!</li>
+           <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:fabiorosado@outlook.com">fabiorosado@outlook.com</a></li>
+           <li>&emsp;&emsp;&emsp;<a href="https://github.com/FabioRosado" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+<a href="https://twitter.com/FabioRosado_" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+<a href="https://www.linkedin.com/in/fabiorosado/" target="_blank"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+<a href="https://www.instagram.com/fabiorosado/" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+ </li>
+       </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<div id="bottom-bar" class="container-fluid">
+    <div class="row">
+        <div class="col" align="left">
+            Made with <i class="fa fa-heart"></i> using <a href="http://jekyllrb.com/">Jekyll</a>
+        </div>
+        <div class="col" align="right">
+            <i class="fa fa-code"></i> on <a href="https://github.com/fabiorosado/fabiorosado.github.io/">Github  </a> &nbsp;<i class="fa fa-github-alt"></i>
+        </div>
+    </div>
+</div>
+
+
+  </body>
+
+</html>
