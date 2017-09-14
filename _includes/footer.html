@@ -1,0 +1,40 @@
+<footer class="site-footer">
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col">
+        <object type="image/svg+xml" data="{{site.url}}/assets/FR.svg">
+        FR
+        </object>
+      </div>
+      <div class="col-3">
+        <h2 class="footer-heading"><i class="fa fa-angle-double-right" aria-hidden="true"> Pages</i></h2>
+        <ul class="page-list">
+          <li> Item 1</li>
+          <li> Item 2</li>
+          <li> Item 3</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <h2 class="footer-heading"><i class="fa fa-angle-double-right" aria-hidden="true"> Latest Posts</i></h2>
+        <ul class="page-list">
+          <li> Item 1</li>
+          <li> Item 2</li>
+          <li> Item 3</li>
+        </ul>
+      </div>
+      <div class="col-3">
+       <h2 class="footer-heading"><i class="fa fa-angle-double-right" aria-hidden="true"> Contact</i></h2>
+       <ul class="contact-list">
+         <li>{{ socialmedia }}</li>
+         <li><i class="fa fa-envelope" aria-hidden="true"> {{ site.email }}</i></li>
+         <li>{% include socialmedia.html %} </li>
+       </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
