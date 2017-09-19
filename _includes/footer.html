@@ -1,40 +1,52 @@
 <footer class="site-footer">
 
   <div class="container-fluid">
-
     <div class="row">
-
       <div class="col">
-        <object type="image/svg+xml" data="{{site.url}}/assets/FR.svg">
-        FR
-        </object>
+        <img src="{{site.url}}/assets/images/FR.svg" width="100" height="100" alt="FabioRosado">
       </div>
       <div class="col-3">
-        <h2 class="footer-heading"><i class="fa fa-angle-double-right" aria-hidden="true"> Pages</i></h2>
-        <ul class="page-list">
-          <li> Item 1</li>
-          <li> Item 2</li>
-          <li> Item 3</li>
-        </ul>
+        <h2 class="footer-heading"> Pages</h2>
+          <ul class="contact-list">
+              <li><a href="{{site.url}}"> Home </a> </li>
+              {% for link in site.pages limit:4 %}
+                  {% if link.title != None %}
+                      <li><a href="{{ link.url }}"> {{ link.title }} </a></li>
+                  {% endif %}
+              {% endfor %}
+          </ul>
       </div>
       <div class="col-4">
-        <h2 class="footer-heading"><i class="fa fa-angle-double-right" aria-hidden="true"> Latest Posts</i></h2>
-        <ul class="page-list">
-          <li> Item 1</li>
-          <li> Item 2</li>
-          <li> Item 3</li>
-        </ul>
+        <h2 class="footer-heading"> Latest Posts</h2>
+          <ul class="contact-list">
+              {% for link in site.posts limit:4 %}
+                 {% if link.category != "Projects" %}
+                     <li><a href="{{ link.url }}"> {{ link.title }} </a></li>
+                 {% endif %}
+              {% endfor %}
+          </ul>
       </div>
       <div class="col-3">
-       <h2 class="footer-heading"><i class="fa fa-angle-double-right" aria-hidden="true"> Contact</i></h2>
+       <h2 class="footer-heading"> Contact</h2>
        <ul class="contact-list">
-         <li>{{ socialmedia }}</li>
-         <li><i class="fa fa-envelope" aria-hidden="true"> {{ site.email }}</i></li>
-         <li>{% include socialmedia.html %} </li>
+         <li>Please feel free to contact me, I'm always happy to chat!</li>
+           <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:fabiorosado@outlook.com">{{ site.email }}</a></li>
+           <li>&emsp;&emsp;&emsp;{% include socialmedia.html %} </li>
        </ul>
       </div>
     </div>
-
   </div>
 
 </footer>
+
+<div id="bottom-bar" class="container-fluid">
+    <div class="row">
+        <div class="col" align="left">
+            Made with <i class="fa fa-heart"></i> using <a href="http://jekyllrb.com/">Jekyll</a>
+        </div>
+        <div class="col" align="right">
+            <i class="fa fa-code"></i> on <a href="https://github.com/fabiorosado/fabiorosado.github.io/">Github  </a> &nbsp;<i class="fa fa-github-alt"></i>
+        </div>
+    </div>
+</div>
+

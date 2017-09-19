@@ -1,0 +1,37 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+
+---
+
+<div class="container">
+  {% for post in site.categories.Projects %}
+    {% assign mod = forloop.index | modulo: 2 %}
+      {% if mod == 0 %}
+        <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" data-src="{{site.url}}/assets/images/{{post.image}}" alt="500x500" style="width: 244px; height: 188px;" src="{{site.url}}/assets/images/{{post.image}}" data-holder-rendered="true">
+            </div>
+            <div class="col-md-7">
+              <h2 class="featurette-heading">{{post.title}} <span class="text-muted">{{post.subtitle}}</span></h2>
+              <p class="lead">{{post.excerpt}}</p>
+              <p><a class="btn btn-primary" href="{{post.url}}" role="button">Read more »</a></p>
+            </div>
+          </div>
+      {% else %}
+        <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">{{post.title}} <span class="text-muted">{{post.subtitle}}</span></h2>
+              <p class="lead">{{post.excerpt}}</p>
+              <p><a class="btn btn-primary" href="{{post.url}}" role="button">Read more »</a></p>
+            </div>
+            <div class="col-md-5 text-right">
+              <img class="featurette-image img-fluid mx-auto" data-src="{{site.url}}/assets/images/{{post.image}}" alt="500x500" style="width: 244px; height: 188px;" src="{{site.url}}/assets/images/{{post.image}}" data-holder-rendered="true">
+            </div>
+          </div>
+    {% endif %}
+  {% endfor %}
+</div>

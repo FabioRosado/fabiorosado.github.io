@@ -25,11 +25,7 @@ layout: default
             <div class="col">
                 {% include socialmedia.html %}
             </div>
-
-
         </div>
-
-
         </center>
     </div>
 
@@ -37,43 +33,24 @@ layout: default
 
     </br></br>
     <center><h3>.Projects</h3></center>
-<div class="wrapper">
-    <div class="card-group">
-      <div class="card">
-        <img class="card-img-top" src="{{ site.url }}/assets/placeholder.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Card title</h4>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</ br></p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link"> Read more...</a>
-            <p class="card-text"><small class="text-muted"></br>Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="{{ site.url }}/assets/placeholder.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Card title</h4>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</ br></p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link"> Read more...</a>
-            <p class="card-text"><small class="text-muted"></br>Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="{{ site.url }}/assets/placeholder.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Card title</h4>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</ br></p>
-        </div>
-        <div class="card-body">
-          <a href="#" class="card-link"> Read more...</a>
-            <p class="card-text"><small class="text-muted"></br>Last updated 3 mins ago</small></p>
-        </div>
+    <div class="wrapper">
+      <div class="card-group">
+        {% for project in site.categories.Projects limit:3 %}
+          <div class="card">
+            <a href="{{project.url}}">
+            <img class="card-img-top" src="{{site.url}}/assets/images/{{project.image}}" alt="Card image cap"></a>
+            <div class="card-body">
+                <h4 class="card-title">{{ project.title }}</h4>
+                <p class="card-text">{{ project.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+                <p><a href="{{project.url}}" class="card-link"> Read more...</a></p>
+            </div>
+            <div class="card-footer text-muted">
+              <small class="text-muted"><b>Last updated:</b> {{ project.date | date: "%b %d, %Y" }} </small>
+            </div>
+          </div>
+        {% endfor %}
       </div>
     </div>
-</div>
 
 
      <!-- Add full-width gallery-->

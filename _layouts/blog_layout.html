@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <div class="container-fluid">
+       <h3> {{ page.title | escape }}</h3>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="post-content">
+      <div class="row">
+        {% for post in site.categories.Featured limit:3 %}
+          <div class="col-md-4">
+            <h2><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
+            <p>{{post.excerpt}}</p>
+            <p><a class="btn btn-primary" href="{{post.url}}" role="button">Read more »</a></p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+      {{ content }}
+  </div>
+</article>
+
+

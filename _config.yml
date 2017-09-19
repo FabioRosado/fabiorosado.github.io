@@ -16,21 +16,25 @@
 title: Fabio Rosado
 email: fabiorosado@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
- My time is divided by flying and coding
+ My time is divided between flying and coding
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-author_name: Fabio Rosado
+author_name: FabioRosado
 
 # Social Usernames/URLs
 twitter_username: "@FabioRosado_"
 github_username:  "FabioRosado"
 linkedin_username: "FabioRosado"
 
+# Used to integrate disqus
+discus:
+  shortname: fabiorosado
+
 # Build settings
 markdown: kramdown
 theme: minima
 highlighter: rouge
-permalink: pretty
+permalink: /:categories/:title/
 plugins:
   - jekyll-feed
 
