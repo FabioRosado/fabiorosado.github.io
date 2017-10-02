@@ -6,7 +6,7 @@ p {
    color: #5e5e5e;
 }
 
-h1, h2, h3, h4, .card-title, a:hover {
+h1, h2, h3, h4, h5, .card-title, a:hover {
     color: #30c3f6;
 }
 
@@ -15,12 +15,6 @@ h1, h2, h3, h4, .card-title, a:hover {
     color: #0275d8;
 }
 
-
-.img-shadow {
-    -webkit-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.39);
-    -moz-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.39);
-    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.39);
-}
 
 .align-center {
     text-align: center;
