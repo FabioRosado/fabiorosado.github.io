@@ -20,8 +20,9 @@
         <h2 class="footer-heading"> Latest Posts</h2>
           <ul class="contact-list">
               {% for link in site.posts limit:4 %}
-                 {% if link.category != "Projects" %}
-                     <li><a href="{{ link.url }}"> {{ link.title }} </a></li>
+                 {% if link.url contains "projects" %}
+                   {% else %}
+                       <li><a href="{{ link.url }}"> {{ link.title }} </a></li>
                  {% endif %}
               {% endfor %}
           </ul>
@@ -49,4 +50,3 @@
         </div>
     </div>
 </div>
-

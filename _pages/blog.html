@@ -7,7 +7,7 @@ permalink: /blog/
 <div>
   {% for post in site.posts %}
     {% assign mod = forloop.index | modulo: 2 %}
-      {% if post.url contains 'projects' %}
+      {% if post.url contains 'projects' or  post.url contains 'featured' %}
       {% comment %} Hide these posts {% endcomment %}
         {% elsif mod == 0 %}
           <hr class="featurette-divider">

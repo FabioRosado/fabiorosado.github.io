@@ -2,7 +2,7 @@
 layout: post
 title:  Hacktoberfest
 subtitle: What I have learned so far
-date:   2017-10-02 11:01:02 +0100
+date:   2017-10-05 11:01:02 +0100
 categories: [code adventures]
 image: hacktoberfest.jpg
 
@@ -36,6 +36,9 @@ There is also a huge number of projects that need help with creating tests so I'
 - [Pclubuiet website](https://github.com/pclubuiet/website)
   - Created resources page
   - updated navbar to display correct active link
+
+- [CloudBridge](https://github.com/gvlproject/cloudbridge)
+  - Added logging messages through the whole project
 
 &nbsp;
 &nbsp;

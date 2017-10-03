@@ -3,7 +3,7 @@ layout: post
 title:  Commit history
 subtitle: How to keep it under control
 author: "FabioRosado"
-date:   2017-10-11 10:01:02 +0100
+date:   2017-10-17 10:01:02 +0100
 categories: GitHub
 image: commits.jpg
 excerpt: 

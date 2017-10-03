@@ -1,28 +1,38 @@
 ---
 layout: post
-title:  Audio To Do List
-date:   2017-09-10 10:00:00 +0000
+title:  Audio To-Do List
+date:   2017-09-30 10:00:00 +0000
 categories: Projects
 image: audiotodo.jpg
-excerpt: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+excerpt: A To-Do List controlled by voice commands that keeps track of unfinished items on a simple txt file.
+
 ---
+The idea of creating a To-Do List that could be controlled by voice came to me when I was developing the Assistant project. I wanted to add more and more functionality to the Assistant and one night the idea of a to-do list controlled by voice popped in my head.
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Initially I thought it would be an easy task. Slowly it became a bit more complex than expected. In the end I thought it would be good to just use this To-Do List as a single program instead of a full integration with the Assistant project.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+The decision to implement the To-Do List on a txt file was made simply because it allows the user to edit the file directly without the need of saying the commands out loud.
 
-Jekyll also offers powerful support for code snippets:
+&nbsp;
+#### Overview
+-----
+&nbsp;
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+- **The Good**
+  - The commands are simple and easy to remember
+  - The `help` command comes in handy
+  - Using a txt file makes it easy to edit the to do list without voice commands
+- **The Bad**
+  - Can't be used on noisy environments
+  - The speech seems unnatural and too fast at times
+- **The Ugly**
+  - The speech recogniser might have trouble recognising words if the user has an accent
+  - There must be an internet connection for the recogniser to work
+  - The loop will run forever. If no command is given the message `Sorry, I couldn't understand that command.` will be repeated over and over again.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+&nbsp;
+#### Info
+-----
+&nbsp;
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+GitHub repo: [https://github.com/FabioRosado/AudioToDoList/](https://github.com/FabioRosado/AudioToDoList/)

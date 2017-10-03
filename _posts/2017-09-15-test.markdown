@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Test"
-date:   2017-09-10
+date:   2017-09-20
 categories: Projects
 image: placeholder.jpg
 excerpt: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.

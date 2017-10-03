@@ -25,10 +25,8 @@ author_name: FabioRosado
 twitter_username: "@FabioRosado_"
 github_username:  "FabioRosado"
 linkedin_username: "FabioRosado"
+disqus_account: "fabiorosado"
 
-# Used to integrate disqus
-discus:
-  shortname: fabiorosado
 
 # Build settings
 markdown: kramdown
