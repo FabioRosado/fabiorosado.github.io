@@ -40,6 +40,12 @@ There is also a huge number of projects that need help with creating tests so I'
 - [CloudBridge](https://github.com/gvlproject/cloudbridge)
   - Added logging messages through the whole project
 
+- [OpsDroid](https://github.com/opsdroid/opsdroid)
+  - Added wit.ai parser following Api.ai example
+  - Added tests to cover wit.ai parser
+  - Added documentation for wit.ai parser
+  - Added test on all parsers covering the ClientOSError exception
+
 &nbsp;
 &nbsp;
 
