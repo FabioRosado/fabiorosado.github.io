@@ -45,6 +45,7 @@ There is also a huge number of projects that need help with creating tests so I'
   - Added tests to cover wit.ai parser
   - Added documentation for wit.ai parser
   - Added test on all parsers covering the ClientOSError exception
+  - Renamed Api.ai references to new name - Dialogflow
 
 &nbsp;
 &nbsp;

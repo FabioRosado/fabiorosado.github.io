@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Commit history
+title:  "Git: Commit history"
 subtitle: How to keep it under control
 author: "FabioRosado"
 date:   2017-10-11 10:01:02 +0100
@@ -9,9 +9,9 @@ image: commits.jpg
 excerpt: 
 ---
 
-If you are just starting using GitHub and contributing to an Open Source project, you might come to a point in which with new Pull Request made, all your previous commits will be displayed on the Pull Request, instead of just the latest commit.
+If you have just started using GitHub and contributing to an Open Source project, you might come to a point in which with every new Pull Request, all your previous commits will be displayed instead of just the latest commit.
 
-I was sitting on a 44 commit history, wondering why the hell all my commits were showing every time I did a new Pull Request. Eventually, I learned how to fix this issue and why this was happening.
+I was sitting on a 44 commit history, wondering why the hell all my commits were showing every time I did a new Pull Request. Eventually, I have learned how to fix this issue and why this was happening.
 
 &nbsp;
 #### Git Rebase
@@ -46,7 +46,7 @@ When you finish the rebase process you will have to force push your changes. Sim
 
 The command `git pull` does two commands in one: git fetch and git merge.
 
-The first thing that git pull does is importing commits from a remote repo (your own GitHub repository or the main one) into your local repository. If the project that you are working on has other contributors and there has been new features or bug fixes added to the main repository, it's quite normal that your local repo will get behind and miss these important new changes.
+The first thing that git pull does is importing commits from a remote repo (your own GitHub repository or the main one) into your local repository. If the project that you are working on has other contributors and there have been new features or bug fixes added to the main repository, it's quite normal that your local repo will get behind and miss these important new changes.
 
 To avoid this you should use the command `git pull upstream master` to get the latest changes made to the main repo and merge them into yours. 
 
@@ -57,7 +57,7 @@ You can also use the flag `--rebase` if you want to avoid getting an empty commi
 -----
 &nbsp;
 
-The solution to keeping your commit history down is quite simple. All you need to do is running the command `git pull upstream master` to pull all the changes made to the main repo and make your local repository up to date. 
+The solution to keep your commit history down is quite simple. All you need to do is to run the command `git pull upstream master` to pull all the changes made to the main repo and make your local repository up to date. 
 
 If you have a huge commit history like me (about 44 commits) you will have to spend a large amount of time fixing conflicts on the rebase process. Eventually, everything will be up to date and that huge list of commits won't show up anymore when you do a Pull Request.
 
