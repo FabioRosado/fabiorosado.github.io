@@ -57,7 +57,7 @@ You can also use the flag `--rebase` if you want to avoid getting an empty commi
 -----
 &nbsp;
 
-The solution to keep your commit history down is quite simple. All you need to do is to run the command `git pull upstream master` to pull all the changes made to the main repo and make your local repository up to date. 
+The solution to keep your commit history down is quite simple. All you need to do is to run the command `git pull upstream master` to pull all the changes made to the main repo and make your local repository up to date. Then all you need to do is push the changes into your GitHub repository with a simple `git push`.
 
 If you have a huge commit history like me (about 44 commits) you will have to spend a large amount of time fixing conflicts on the rebase process. Eventually, everything will be up to date and that huge list of commits won't show up anymore when you do a Pull Request.
 

@@ -35,6 +35,7 @@ highlighter: rouge
 permalink: /:categories/:title/
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 include: ['_pages']
 
