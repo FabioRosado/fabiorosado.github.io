@@ -5,7 +5,7 @@ layout: default
 
   <header class="post-header">
     <div class="container-fluid">
-       <h3> {{ page.title | escape }}</h3>
+       <h3 class="title"> {{ page.title | escape }}</h3>
     </div>
   </header>
 
@@ -14,8 +14,8 @@ layout: default
       <div class="row">
         {% for post in site.categories.Featured limit:3 %}
           <div class="col-md-4">
-            <p><a href="{{ post.url }}"><img src="{{site.url}}/assets/images/{{post.image}}"></a><p>
-            <h2><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
+            <p><a href="{{ site.baseurl }}{{ post.url }}"><img src="{{site.url}}/assets/images/{{post.image}}"><p>
+            <h2 class="featurette-heading">{{post.title}}</a></h2>
             <p>{{post.excerpt}}</p>
             <p><a class="btn btn-primary" href="{{post.url}}" role="button">Read more »</a></p>
           </div>
