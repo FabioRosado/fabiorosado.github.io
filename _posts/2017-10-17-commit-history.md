@@ -14,7 +14,7 @@ If you have just started using GitHub and contributing to an Open Source project
 I was sitting on a 44 commit history, wondering why the hell all my commits were showing every time I did a new Pull Request. Eventually, I have learned how to fix this issue and why this was happening.
 
 &nbsp;
-#### Git Rebase
+# Git Rebase
 -----
 &nbsp;
 
@@ -40,7 +40,7 @@ When you finish the rebase process you will have to force push your changes. Sim
 
 
 &nbsp;
-#### Git Pull
+# Git Pull
 -----
 &nbsp;
 
@@ -53,7 +53,7 @@ To avoid this you should use the command `git pull upstream master` to get the l
 You can also use the flag `--rebase` if you want to avoid getting an empty commit from the merge.
 
 &nbsp;
-#### The Solution
+# The Solution
 -----
 &nbsp;
 

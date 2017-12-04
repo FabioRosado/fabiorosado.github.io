@@ -14,7 +14,7 @@ Initially I thought it would be an easy task. Slowly it became a bit more comple
 The decision to implement the To-Do List on a txt file was made simply because it allows the user to edit the file directly without the need of saying the commands out loud.
 
 &nbsp;
-#### Overview
+# Overview
 -----
 &nbsp;
 
@@ -31,7 +31,7 @@ The decision to implement the To-Do List on a txt file was made simply because i
   - The loop will run forever. If no command is given the message `Sorry, I couldn't understand that command.` will be repeated over and over again.
 
 &nbsp;
-#### Info
+# Info
 -----
 &nbsp;
 

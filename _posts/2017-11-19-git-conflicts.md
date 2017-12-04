@@ -23,7 +23,7 @@ But what does all of this mean?
 
 
 &nbsp;
-#### Reason for conflicts to happen
+# Reason for conflicts to happen
 -----
 &nbsp;
 
@@ -47,7 +47,7 @@ Let's open the file and inspect the problem.
 
 
 &nbsp;
-#### The conflicting file
+# The conflicting file
 -----
 &nbsp;
 
@@ -86,12 +86,8 @@ But your own repository has the following changes:
 As you can see, git is an amazing tool and it will tell you about issues before trying to do something. This conflict warning is asking you to check the differences between the two versions and choose which one do you want to use. 
 
 
-
-
-
-
 &nbsp;
-#### Fixing the conflict
+# Fixing the conflict
 -----
 &nbsp;
 

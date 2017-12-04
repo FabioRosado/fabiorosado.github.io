@@ -17,9 +17,9 @@ This was my first year participating in the Hacktoberfest, the biggest problem I
 So, in the end, it was easier for me to keep contributing to Opsdroid since I knew the project and there were plenty of issues that I could contribute to instead of spending hours in search for a new project to contribute to.
 
 
+
 &nbsp;
-&nbsp;
-## What I've learned
+# What I've learned
 ----
 &nbsp;
 
@@ -28,8 +28,6 @@ As Hacktoberfest progressed I've learned how to use git more efficiently and bet
 My knowledge of tests also improved a bit from all the attempts at writing them. I'm more comfortable with unit tests and know a bit more about how to use `mock.patch`. I started working my way through the book - Test-Driven Development With Python - to improve my skills at the cycle test > code > test.
 
 
-
-&nbsp;
 &nbsp;
 ## Projects Helped
 ----

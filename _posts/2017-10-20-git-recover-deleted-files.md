@@ -17,7 +17,7 @@ When I checked the files in GitHub, the Pull Request was showing changes that ha
 At first that "Oh no!" moment hit, then I remembered that in git, files are not really deleted so I could go back in time and I  could correct the mess and recover the two files that I was trying to include in my PR.
 
 &nbsp;
-#### Git Reflog
+# Git Reflog
 -----
 &nbsp;
 
@@ -48,7 +48,7 @@ So if you want to fix some issue on the commit **bd96dd5 HEAD@{5}: commit: Updat
 
 
 &nbsp;
-#### Detached Head
+# Detached Head
 -----
 &nbsp;
 
@@ -74,7 +74,7 @@ HEAD is now at <SHA-1 key>... <commit message> (#<issue number>)
 As you can see by the warning message, even if you are in a detached state, you can still make changes, look around, discard commits or make new commits. So if you commit something and want to keep those changes, all you need to do is create a new branch and your changes will be shown there.
 
 &nbsp;
-#### The Solution
+# The Solution
 -----
 &nbsp;
 

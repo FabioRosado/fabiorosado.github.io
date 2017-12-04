@@ -65,7 +65,10 @@ h1.title, h2.featurette-heading {
 /**
 * Page elements
 */
-
+.highlighter-rouge{
+    border-bottom: 1.5rem;
+    border-top: 1.5rem;
+}
 .card-group {
     width: 480px;
 }

@@ -13,7 +13,7 @@ While creating a function that uses `logging.info` to log useful information on 
 Opsdroid uses a file named `configuration.yml` to keep track of all the configuration details. Upon the suggestion of Jacob(the creator and maintainer of the project) a `welcome-message: true` line was added to the configuration file in case the user wishes to hide the welcome message.
 
 &nbsp;
-### The Function
+# The Function
 ------
 &nbsp;
 
@@ -39,7 +39,7 @@ The `welcome_message` function is a very basic function that uses the `logging.i
 {% endhighlight %}
 
 &nbsp;
-### The Test
+# The Test
 ------
 &nbsp;
 
@@ -58,7 +58,7 @@ The `welcome_message` function is a very basic function that uses the `logging.i
 - On line 5 `logmock.called` will return a boolean whether the mocked object has been called. Since we are sure that the dummy config file will always return True we do a simple `assertTrue` to see if `opsdroid.__main__.LOGGER.info` was called.
 
 &nbsp;
-### Final Thoughts
+# Final Thoughts
 ------
 &nbsp;
 
