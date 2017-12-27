@@ -4,7 +4,9 @@ title:  "Test: Was Logging called"
 subtitle:
 author: "FabioRosado"
 date:   2017-09-14 12:01:02 +0100
-categories: Featured
+categories: Code
+category_icon: <i class="fa fa-code" aria-hidden="true"></i>
+tags: Featured
 image: testlogging.jpg
 excerpt: An example from opsdroid on how to test if a logging call was made successfully. Unittest and mock.patch were used to make that assertion.
 ---

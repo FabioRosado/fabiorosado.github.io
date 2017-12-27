@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: "Roboto", Helvetica, Arial, sans-serif !default;
+$base-font-size:   17px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+$heading-font: "Open Sans", sans-serif !default;
+
+$spacing-unit:     30px !default;
+$padding-unit:     1.5rem !default;
+
+$text-color:       #383838 !default;
+$background-color: #FDFDFD !default;
+$brand-color:      #45C3FF !default;
+$brand-color-light: lighten($brand-color, 20%) !default;
+$brand-color-dark:  darken($brand-color, 35%) !default;
+
+$grey-color:       #5D7682 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$red-color:       #ed2f32 !default;
+
+$pic-overlay:     rgba(36, 46, 51, 0.55) !default;
+
+// Social Media Colors
+$facebook-color:        #4f76cc !default;
+$twitter-color:         #44C4FF !default;
+$github-color:          #23242B !default;
+$instagram-color:       #FF4492 !default;
+$medium-color:          #44FFAE !default;
+$linkedin-color:        #008CC9 !default;
+
+
+// Import partials.
+@import
+  "niebieski/base",
+  "niebieski/layout",
+  "niebieski/syntax-highlighting"
+;

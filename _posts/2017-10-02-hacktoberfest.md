@@ -3,7 +3,7 @@ layout: post
 title:  Hacktoberfest
 subtitle: My first experience
 date:   2017-10-05 11:01:02 +0100
-categories: [code adventures]
+categories: adventures
 image: hacktoberfest.jpg
 
 ---
@@ -15,7 +15,6 @@ By participating in the Hacktoberfest you get stickers and if you submit at leas
 This was my first year participating in the Hacktoberfest, the biggest problem I've come across is to find projects to contribute to. There are so many new projects being created(some even just for hacktoberfest), that it's easy to spend hours browsing GitHub in search of the right project to participate.
 
 So, in the end, it was easier for me to keep contributing to Opsdroid since I knew the project and there were plenty of issues that I could contribute to instead of spending hours in search for a new project to contribute to.
-
 
 
 &nbsp;

@@ -3,6 +3,8 @@ layout: post
 title:  Audio To-Do List
 date:   2017-09-30 10:00:00 +0000
 categories: Projects
+tag: Voice Controlled
+tag-icon: <i class="fa fa-microphone" aria-hidden="true"></i>
 image: audiotodo.jpg
 excerpt: A To-Do List controlled by voice commands that keeps track of unfinished items on a simple txt file.
 

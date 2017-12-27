@@ -2,64 +2,112 @@
 layout: default
 ---
 
-<div class="home">
-
-  {{ content }}
-
-    <div class="container">
-        <center>
-        <div class="row">
-            <div class="col">
-                <img src="https://qph.ec.quoracdn.net/main-thumb-6153074-200-iddrtgrgsgfrfjhakkqpwnifbztfhesn.jpeg" alt="Fabio Rosado" class="rounded-circle">
-            </div>
-            </div>
-        <div class="row">
-            <div class="col">
-                <h1 class="title"> {{ site.title }}</h1>
-                <h3>
-                    <small class="text-muted">{{ site.description }}</small>
-                </h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                {% include socialmedia.html %}
-            </div>
-        </div>
-        </center>
+<div class="content-start">
+    <div class="col-sm-6 offset-sm-3 text-center">
+      <img src="{{ site.url}}/assets/images/profile_pic.jpg" alt="{{ site.title }}" class="rounded-circle">
+      <h1 class="title drop-shadow"> {{ site.title }}</h1>
+      <h4 class="text-muted"> {{ site.description }}</h4>
+    </div>    
+    <div class="col-sm-6 offset-sm-3 text-center">
+      <ul class="social-link">
+            {% if site.github_username %}
+                <li class="social-media">
+                    <a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github"></i></a>
+                </li>
+            {% endif %}
+            {% if site.twitter_username %}
+                <li class="social-media">
+                    <a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i></a>
+                </li>
+            {% endif %}
+            {% if site.medium_username %}
+                <li class="social-media">
+                    <a href="https://medium.com/@{{ site.medium_username }}"><i class="fa fa-medium"></i></a>
+                </li>
+            {% endif %}
+            {% if site.facebook_username %}
+                <li class="social-media">
+                    <a href="https://www.facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook"></i></a>
+                </li>
+                {% endif %}
+            {% if site.instagram_username %}
+                <li class="social-media">
+                    <a href="https://www.instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a>
+                </li>
+            {% endif %}
+            {% if site.linkedin_username %}
+                <li class="social-media">
+                    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><i class="fa fa-linkedin"></i></a>
+                </li>
+            {% endif %}
+      </ul>
     </div>
-
-    <!-- Projects -->
-
-    </br></br>
-    <center><h3>.Projects</h3></center>
-    <div class="wrapper">
-      <div class="card-group">
-        {% for project in site.categories.Projects limit:3 %}
-          <div class="card">
-            <a href="{{project.url}}">
-            <img class="card-img-top" src="{{site.url}}/assets/images/{{project.image}}" alt="Card image cap"></a>
-            <div class="card-body">
-                <h4 class="card-title">{{ project.title }}</h4>
-                <p class="card-text">{{ project.excerpt | remove: '<p>' | remove: '</p>' }}</p>
-                <p><a href="{{project.url}}" class="card-link"> Read more...</a></p>
-            </div>
-            <div class="card-footer text-muted">
-              <small class="text-muted"><b>Last updated:</b> {{ project.date | date: "%b %d, %Y" }} </small>
-            </div>
+  </div>
+  
+  
+  
+  <!-- Projects Area -->
+  <div class="container-fluid brandcolor-bg">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3 text-center">
+          <h1 class="white-text header drop-shadow">Projects</h1>
+        </div>
+      </div>
+        <div class="row">
+          {% for project in site.categories.Projects limit: 2%}  
+          <div class="col-md-6 col-sm-12">
+              <div class="card-image" style="background-image: url({{site.url}}/assets/images/{{project.image}});">
+              <div class="project-text text-center pad-left pad-right">
+                  <h5 class="project-tag"> {{ project.tag-icon }} {{ project.tag }}</h5>
+                  <h3 class="card-title white-text"> {{ project.title }}</h3>
+                  <p class="project-excerpt">{{ project.excerpt | truncate:165 }}</p>
+                  <a class="btn btn-brand drop-shadow" href="{{ project.url }}" role="button"><i class="fa fa-folder-open" aria-hidden="true"></i> View Project</a>
+              </div>
+              </div>
           </div>
-        {% endfor %}
+          {% endfor %}  
       </div>
     </div>
-
-
-     <!-- Add full-width gallery-->
-
-<div class="container-fluid">
-
-</div>
-
-
-
-
-</div>
+  </div>
+  
+  
+  <!-- Blog Posts Area -->
+  <div class="container">
+    <div class="row header drop-shadow">
+      <div class="col-sm-6 offset-sm-3 text-center">
+        <h1 class="brand-text"> Recent Posts</h1>
+      </div>
+    </div>    
+    <div class="row">
+      {% assign post_counter = 0 %}
+      {% for post in site.posts %}
+        <!-- Updates category icon -->
+        {% if post.url contains site.category_one %}
+          {% assign category_icon=site.category_one_icon %}
+        {% elsif post.url contains site.category_two %}
+          {% assign category_icon = site.category_two_icon %}
+        {% elsif post.url contains site.category_three %}
+          {% assign category_icon = site.category_three_icon %}
+        {% elsif post.url contains site.category_four %}
+          {% assign category_icon = site.category_four_icon %}
+        {% else %}
+          {% assign category_icon=site.default_icon %}
+        {% endif %}
+        <!-- Skips over projects, adds only the first 3 recent posts -->
+        {% if post_counter >= 3 %}
+          {% break %}
+        {% elsif post.url contains 'projects' %}
+        {% else %}
+          {% assign post_counter = post_counter | plus: 1 %}
+          <div class="col-md-4 col-sm-12 text-center recent-posts">
+            <a href="{{post.url}}"><img class="img-fluid" src="{{site.url}}/assets/images/{{post.image}}" alt={{post.title | escape}}></a>
+            <h6 class="spaced">{{ category_icon }} {{ post.categories }} </h6>
+            <h2 class="dark-text"> {{ post.title }} </h2>
+            <p>{{ post.excerpt | truncate:165}}</p>
+            <a class="btn btn-brand drop-shadow" href="{{ post.url }}" role="button"> Read More</a>  
+          </div>
+        {% endif %}
+      {% endfor %}
+      </div>      
+  </div>

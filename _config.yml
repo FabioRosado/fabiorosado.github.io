@@ -19,21 +19,36 @@ description: > # this means to ignore newlines until "baseurl:"
  My time is divided between flying and coding
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-author_name: FabioRosado
+author: FabioRosado
 
 # Analytics
 google_analytics: UA-109089626-1
 
-# Social Usernames/URLs
-twitter_username: "@FabioRosado_"
-github_username:  "FabioRosado"
-linkedin_username: "FabioRosado"
-disqus_account: "fabiorosado"
+# Footer Contact Area
+footer_text: Please feel free to contact me. <br> I'm always happy to chat!
+
+# Social Media Usernames
+github_username:  FabioRosado
+twitter_username: FabioRosado_
+instagram_username: FabioRosado
+linkedin_username: fabiorosado
+disqus_username: FabioRosado
+
+# Blog Categories
+default_icon: <i class="fa fa-asterisk" aria-hidden="true"></i>
+category_one: code
+category_one_icon: <i class="fa fa-code" aria-hidden="true"></i>
+category_two: git
+category_two_icon: <i class="fa fa-code-fork" aria-hidden="true"></i>
+category_three: python
+category_three_icon: 
+category_four: random
+category_four_icon: <i class="fa fa-random" aria-hidden="true"></i>
 
 
 # Build settings
 markdown: kramdown
-theme: minima
+remote_theme: niebieski 
 highlighter: rouge
 permalink: /:categories/:title/
 plugins:

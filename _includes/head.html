@@ -1,20 +1,17 @@
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/021da17a9a.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/logo.svg" width="16" heigth="16">
 
-  <link rel="stylesheet" type="text/css" media="all" href="{{ "/assets/css/style.css" | relative_url }}"  />
+  <link rel="stylesheet" href="https://use.fontawesome.com/021da17a9a.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Roboto|Open+Sans|Raleway|Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 
-  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/FR.svg" width="16" heigth="16">
-
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-
-  {% if jekyll.environment == 'production' and site.google_analytics %}
-    {% include google-analytics.html %}
-  {% endif %}
-  {% seo %}
+{% if site.google_analytics %}
+  {% include google-analytics.html %}
+{% endif %}
+{% seo %}
 </head>

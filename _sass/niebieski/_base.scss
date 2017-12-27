@@ -1,0 +1,215 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  color: $brand-color;
+}
+
+.white-text {
+  color: $background-color !important;
+}
+
+.dark-text {
+  color: $text-color;
+}
+
+.brand-color {
+  color: $brand-color;
+}
+
+.header {
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
+}
+
+.drop-shadow {
+  text-shadow: 1px 1px 1px #02547bb3;
+}
+
+.overlay {
+  background-color: $pic-overlay;
+
+}
+
+.pad-top {
+  padding-top: $spacing-unit;
+}
+
+.pad-bottom {
+  padding-bottom: $spacing-unit;
+}
+
+.pad-left {
+  padding-left: $spacing-unit;
+}
+
+.pad-right {
+  padding-right: $spacing-unit;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .center-sm-text {
+      text-align: center;
+  }
+  
+}
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 1.5;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.bg
+{
+  width: 100% !important;
+  height: 400px; 
+  width: 100%; 
+  display: block; 
+  padding-top: 20px;
+}
+
+.standout {
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+}
+
+.opacity {
+  &:hover, &:focus {
+      opacity: 0.9;
+  }
+  a:hover {
+      text-decoration: none;
+  }
+}
+
+
+
+/**
+ * Lists
+ */
+
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+.progress {
+  margin-bottom: 0.5rem;
+}
+
+.list-group {
+  margin-left: 0;
+}
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $base-font-weight;
+}
+
+.spaced {
+  margin-top: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
+
+  &:hover {
+    color: $brand-color-dark;
+    text-decoration: underline;
+  }
+
+}
+
+
+/**
+ * Icons
+ */
+.fa-heart {
+    color: $red-color;
+}
+
+.fa-twitter {
+    color: $twitter-color;
+}
+
+.fa-github {
+    color: $github-color;
+}
+
+.fa-facebook {
+    color: $facebook-color;
+}
+
+.fa-linkedin {
+    color: $linkedin-color;
+}
+
+.fa-instagram {
+    color: $instagram-color;
+}
+
+.fa-medium {
+    color: $medium-color;
+}
+
+
