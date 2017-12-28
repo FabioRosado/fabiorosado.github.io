@@ -32,42 +32,42 @@ permalink: /blog/
 {% for post in site.posts %}
   {% assign mod = forloop.index | modulo: 2 %}
   {% if post.url contains 'projects' or post.tags contains 'Featured' %}
-  {% elsif mod == 0 %}
-  <div class="row pad-bottom">
-      <div class="col-md-8 d-none d-md-block">
+  {% elsif mod == 0 or forloop.index == 1 %}
+  <div class="row">
+      <div class="col-md-8 d-none d-md-block pad-top">
           <h1 class="drop-shadow">{{post.title}} </br> <span class="text-muted">{{post.subtitle}}</span></h2>
           <p>{{ post.excerpt }}</p>
           <a class="btn btn-brand drop-shadow" href="{{ post.url }}" role="button"> Read More</a> 
-      </div>
-      <div class="col-md-4">
+        </div>
+      <div class="col-md-4 pad-top">
         <a href="{{post.url}}">
           <img class="standout img-fluid opacity" src="{{site.url}}/assets/images/{{post.image}}" alt="{{ post.title | escape }}">
         </a>
       </div>
       <!-- Puts text under image on small screens -->
-      <div class="col-sm-8 d-md-none">
+      <div class="col-sm-8 d-md-none pad-top">
           <h1 class="drop-shadow">{{post.title}} </br> <span class="text-muted">{{post.subtitle}}</span></h2>
           <p>{{ post.excerpt }}</p>
           <a class="btn btn-brand drop-shadow" href="{{ post.url }}" role="button"> Read More</a> 
-      </div>
+        </div>
     </div>
-    <hr class="spaced pad-bottom">
+    <hr class="spaced">
 
 
   {% else %}
-  <div class="row pad-bottom">
-  <div class="col-md-4">
+  <div class="row">
+  <div class="col-md-4 pad-top">
     <a href="{{post.url}}">
       <img class="standout img-fluid opacity" src="{{site.url}}/assets/images/{{post.image}}" alt="{{ post.title | escape }}">
     </a>
   </div>
-  <div class="col-md-8">
+  <div class="col-md-8 pad-top">
       <h1 class="drop-shadow">{{post.title}} </br> <span class="text-muted">{{post.subtitle}}</span></h2>
       <p>{{ post.excerpt }}</p>
-      <a class="btn btn-brand drop-shadow" href="{{ post.url }}" role="button"> Read More</a> 
+      <a class="btn btn-brand drop-shadow" href="{{ post.url }}" role="button"> Read More</a>
   </div>
 </div>
-<hr class="spaced pad-bottom">
+<hr class="spaced">
   {% endif %}
 {% endfor %}
 </div>
