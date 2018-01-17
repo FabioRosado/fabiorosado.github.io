@@ -5,6 +5,7 @@ subtitle: The day I messed up
 author: "FabioRosado"
 date:   2017-10-11 10:01:02 +0100
 categories: GitHub
+category_icon:  <i class="fa fa-code-fork" aria-hidden="true"></i>
 image: git-recover.jpg
 excerpt: 
 ---

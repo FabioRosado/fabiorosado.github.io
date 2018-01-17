@@ -4,6 +4,7 @@ title:  Hacktoberfest
 subtitle: My first experience
 date:   2017-10-05 11:01:02 +0100
 categories: adventures
+category_icon:  <i class="fa fa-random" aria-hidden="true"></i>
 image: hacktoberfest.jpg
 
 ---

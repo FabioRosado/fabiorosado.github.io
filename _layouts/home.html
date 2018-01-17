@@ -82,18 +82,6 @@ layout: default
     <div class="row">
       {% assign post_counter = 0 %}
       {% for post in site.posts %}
-        <!-- Updates category icon -->
-        {% if post.url contains site.category_one %}
-          {% assign category_icon=site.category_one_icon %}
-        {% elsif post.url contains site.category_two %}
-          {% assign category_icon = site.category_two_icon %}
-        {% elsif post.url contains site.category_three %}
-          {% assign category_icon = site.category_three_icon %}
-        {% elsif post.url contains site.category_four %}
-          {% assign category_icon = site.category_four_icon %}
-        {% else %}
-          {% assign category_icon=site.default_icon %}
-        {% endif %}
         <!-- Skips over projects, adds only the first 3 recent posts -->
         {% if post_counter >= 3 %}
           {% break %}
@@ -102,7 +90,7 @@ layout: default
           {% assign post_counter = post_counter | plus: 1 %}
           <div class="col-md-4 col-sm-12 text-center recent-posts">
             <a href="{{post.url}}"><img class="img-fluid" src="{{site.url}}/assets/images/{{post.image}}" alt={{post.title | escape}}></a>
-            <h6 class="spaced">{{ category_icon }} {{ post.categories }} </h6>
+            <h6 class="spaced">{{ post.category_icon }} {{ post.categories }} </h6>
             <h2 class="dark-text"> {{ post.title }} </h2>
             <p>{{ post.excerpt | truncate:165}}</p>
             <a class="btn btn-brand drop-shadow" href="{{ post.url }}" role="button"> Read More</a>  

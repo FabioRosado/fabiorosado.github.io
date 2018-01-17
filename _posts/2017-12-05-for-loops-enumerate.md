@@ -5,6 +5,7 @@ subtitle: Why you should be using it
 author: "FabioRosado"
 date:   2017-12-05 20:00:02 +0000
 categories: Python
+category_icon:  <i class="fa fa-code" aria-hidden="true"></i>
 image: enumerate.jpg
 excerpt: 
 ---

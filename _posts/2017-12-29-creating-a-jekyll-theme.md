@@ -5,6 +5,7 @@ subtitle: What I've learned
 author: "FabioRosado"
 date:   2017-12-29 16:00:02
 categories: Code
+category_icon:  <i class="fa fa-code" aria-hidden="true"></i>
 image: galymzhan-abdugalimov-181.jpg
 excerpt: Niebieski is the first theme that I've created from scratch. In this post I look back at what I've learned and the struggles I faced when creating the theme.
 ---
