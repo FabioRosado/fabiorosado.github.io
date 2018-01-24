@@ -7,7 +7,7 @@
             <div class="col-sm-3">
                 <h5 class="footer-title drop-shadow">Pages</h5>
                  <ul class="footer-link">
-                     <li><a href="{{ site.url }}">Home</a></li>
+                     <li><a href="/">Home</a></li>
                     {% for link in site.pages | limit:6 %}
                         {% if link.title != None %}
                             <li><a href="{{ link.url }}">{{ link.title }}</a></li>
