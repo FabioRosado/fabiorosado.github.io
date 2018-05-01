@@ -3,7 +3,7 @@ layout: post
 title:  Introduction to Vim
 subtitle: Learn how to get started with this editor  
 author: "FabioRosado"
-date:   2018-04-11 18:10:02
+date:   2018-04-24 18:10:02
 categories: Terminal
 category_icon: <i class="fa fa-terminal aria-hidden="true"></i>
 image: vim.jpg
@@ -30,7 +30,7 @@ Vim comes with three different modes:
 - Insert Mode (Press _i_ key)
 - Visual Mode (Press _v_ key)
 
-These modes are quite easy to understand and you can see which mode you are in on the bottom left corner of the terminal window. 
+These modes are quite easy to understand and you can see which mode you are in on the bottom left corner of the terminal window.
 
 The normal mode is the default mode and the one activated as soon as you open Vim, you can move around, read the text, copy, insert lines, etc. The only thing you can't do in this mode is editing the text.
 

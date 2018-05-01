@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Tweetnalytics
-date:   2017-11-20 09:30:00 +0000
+date:   2018-04-16 09:30:00 +0000
 categories: Projects
 tag: Sentiment Analysis
 tag-icon: <i class="fas fa-chart-pie" aria-hidden="true"></i>

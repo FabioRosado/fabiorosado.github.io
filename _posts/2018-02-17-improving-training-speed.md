@@ -3,7 +3,7 @@ layout: post
 title:  Improving a Classifier Training Speed
 subtitle: Things I've learned while creating a tweets classifier
 author: "FabioRosado"
-date:   2018-04-11 18:10:02
+date:   2018-02-17 18:10:02
 categories: Code
 category_icon:  <i class="fa fa-code" aria-hidden="true"></i>
 image: galymzhan-abdugalimov-181.jpg
