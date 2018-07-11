@@ -13,7 +13,7 @@ permalink: /blog/
           {% for post in site.tags.Featured limit:3 %}
               <div class="col-sm-4 pad-top opacity">
                 <a href="{{post.url}}">
-                  <div class="card-image overlay text-center" style="background-image: url({{site.url}}/assets/images/{{post.image}});">
+                  <div class="card-image overlay post-image text-center" style="background-image: url({{site.url}}/assets/images/{{post.image}});">
                       <div class="project-text">
                           <h5 class="pad-top">{{ post.category_icon }} {{ post.categories[0] }}</h6>
                           <h2 class="white-text drop-shadow">{{ post.title }}</h1>
