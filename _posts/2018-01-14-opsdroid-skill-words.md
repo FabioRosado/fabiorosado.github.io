@@ -4,7 +4,7 @@ title:  Opsdroid Skill - Words
 date:   2018-01-14 09:30:00 +0000
 categories: Projects
 tag: Chat Bot
-tag-icon: <i class="fa fa-android" aria-hidden="true"></i>
+tag-icon: <i class="fab fa-android"></i>
 image: opsdroid-skill.jpg
 excerpt: A skill to be used with Opsdroid that takes advantage of the NLTK library to allow opsdroid to translate or define a word. 
 

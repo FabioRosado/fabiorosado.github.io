@@ -4,7 +4,7 @@ title:  Tweetnalytics
 date:   2018-04-16 09:30:00 +0000
 categories: Projects
 tag: Sentiment Analysis
-tag-icon: <i class="fas fa-chart-pie" aria-hidden="true"></i>
+tag-icon: <i class="fas fa-chart-pie"></i>
 image: tweetnalytics.jpg
 excerpt: Does sentiment analysis on a subject depending of opinions shared on twitter by using the NLTK library.
 
