@@ -21,3 +21,24 @@ body {
   top:      35%;
   left:     35%;
 }
+
+#weather {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.temperature {
+  font-family: 'Vast Shadow', cursive;
+  font-size: 40px;
+  vertical-align: top;
+  position: absolute;
+  left: 80px;
+}
+
+#temp-values {
+  text-align: right;
+  text-justify: distribute;
+  display: block;
+  position: relative;
+  top: -60px;
+}
