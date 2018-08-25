@@ -2,14 +2,12 @@
 layout: post
 title:  Creating an Weather App
 subtitle: Connect to an API using Vue and Axios
-date:   2018-08-16 15:25:00
+date:   2018-08-25 16:50:00
 categories: Vue
 tag-icon: <i class="fab fa-vuejs"></i>
 image: weatherApp.jpg
-excerpt: A landing page that shows quotes, current weather and time, it also has a list of to do and notes.
+excerpt: Using VueJs with Axios to connect to OpenWeatherMap API then we build a simple weather web application.
 ---
-
-# Connecting to an API with Vue and Axios
 
 One of the challenges on freecodecamp is to build a [weather app](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/show-the-local-weather/). The idea is pretty simple. Get the weather data from the API provided, build a function to convert the temperature from Celsius to Fahrenheit and show the current weather.
 
@@ -73,7 +71,7 @@ axios
 
 If you are wondering why we are getting `response.data` and not just response, the reason for this is simple. The `response` will not only return the data, but also status code, headers and the type of request made. 
 
-Use the openweathermap URL and add another `console.log(response);` and see what you get when you run the code.
+Use the OpenWeatherMap URL and add another `console.log(response);` and see what you get when you run the code.
 
 
 ## Creating the Vue app
@@ -327,7 +325,7 @@ data: {
 
 #### Getting API Data with Axios
 
-The Openweathermap API returns a JSON response that looks like this:
+The OpenWeatherMap API returns a JSON response that looks like this:
 
 ```json
 {
@@ -405,7 +403,7 @@ Notice that we are adding something to some variables.
 
 In the `icon` variable we add the path for the images folder, the file name and file extension. When Vue runs it will change the `src` of the image to whatever the value inside `icon` is.
 
-For the file name, we will slice the string that we get from the API from the char located on index 0 up to char at index 2 - this is because openweathermap changes the icon name depending on if it is day or night.
+For the file name, we will slice the string that we get from the API from the char located on index 0 up to char at index 2 - this is because OpenWeatherMap changes the icon name depending on if it is day or night.
 
 The `sunrise` and `sunset` times are given in Unix epoch time, so we just convert the time to a human-readable format and then slice the string in order to get only the hours and minutes.
 
@@ -455,4 +453,10 @@ let weatherApp = new Vue({
 });
 ```
 
-Replace `{Your API Key}` with the API key that you obtained from openweathermap and reload the page, you should see the app with the current weather data now.
+Replace `{Your API Key}` with the API key that you obtained from OpenWeatherMap and reload the page, you should see the app with the current weather data now.
+
+## Conclusion
+
+This post was rather long, I would like to first thank you for sticking up with it. I hope you learned how to use axios and Vue together to get data from an API. I would like now to ask you if you would like something to be explained more clearly or if you would like me to explain something else.
+
+Finally, what was the first thing you created by using an API?

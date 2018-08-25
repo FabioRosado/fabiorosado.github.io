@@ -14,7 +14,7 @@ let weatherApp = new Vue({
   },
   methods: {
     getWeather() {
-      let url = "http://api.openweathermap.org/data/2.5/weather?q=Redhill,uk&units=metric&APPID=e6ffcaca8fcdc6fa147bf75301b345b1";
+      let url = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&APPID={Your API Key Here}";
       axios
         .get(url)
         .then(response => {
