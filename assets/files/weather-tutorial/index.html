@@ -18,9 +18,16 @@
 <body>
   <div id="app">
     <div id="weather">
-      <img src="images/sunny.svg"> Sunny
-      <span class="temperature">24°</span><br>
-      <span id="temp-values">MIN 20° <br> Max 27°</span>
+      <img src="images/sunny.svg"> {{overcast}}
+      <span class="temperature">{{currentTemp}}°</span><br>
+      <span id="temp-values">Min {{minTemp}}° <br> Max {{maxTemp}}°</span>
+    </div>
+    <div id="info">
+      <img class="icon" src="images/sunrise.svg"> {{sunrise}}
+      <img class="icon" src="images/sunset.svg"> {{sunset}}
+      <img class="icon" src="images/humidity.svg"> {{humidity}}
+      <img class="icon" src="images/pressure.svg"> {{pressure}}
+      <img class="icon" src="images/wind.svg"> {{wind}}
     </div>
 </body>
 
