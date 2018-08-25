@@ -14,7 +14,7 @@ let weatherApp = new Vue({
   },
   methods: {
     getWeather() {
-      let url = "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=e6ffcaca8fcdc6fa147bf75301b345b1";
+      let url = "http://api.openweathermap.org/data/2.5/weather?q=Redhill,uk&units=metric&APPID=e6ffcaca8fcdc6fa147bf75301b345b1";
       axios
         .get(url)
         .then(response => {
@@ -25,7 +25,7 @@ let weatherApp = new Vue({
           this.humidity = response.data.main.humidity + '%';
           this.wind = response.data.wind.speed + 'm/s';
           this.overcast = response.data.weather[0].description;
-          this.icon = response.data.weather[0].icon.slice(0, 2);
+          this.icon = "images/" + response.data.weather[0].icon.slice(0, 2) + ".svg";
           this.sunrise = new Date(response.data.sys.sunrise*1000).toLocaleTimeString("en-GB").slice(0,5);
           this.sunset = new Date(response.data.sys.sunset*1000).toLocaleTimeString("en-GB").slice(0,5);
       })
