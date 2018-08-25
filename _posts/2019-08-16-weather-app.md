@@ -325,7 +325,6 @@ data: {
 
 ```
 
-
 #### Getting API Data with Axios
 
 The Openweathermap API returns a JSON response that looks like this:
