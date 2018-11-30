@@ -1,5 +1,80 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
+// ---
+// # Only the main Sass file needs front matter (the dashes are enough)
+// ---
 
-@import "niebieski";
+@charset "utf-8";
+
+// Define the default values for each variable.
+$desktop-size: 920px;
+
+$base-font-family: 'Jura', sans-serif;
+$base-font-size: 18px;
+$base-font-weight: 400;
+$bold-font-weight: 700;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+$heading-font: 'Josefin Slab', serif;
+$cursive-font: 'Dancing Script', cursive;
+
+$spacing-unit: 30px;
+$padding-unit: 1.5rem;
+
+$colors: (
+  text-color: #1E2A39,
+  text-color-grey: #57606B,
+  text-color-light: #FFFFFF,
+
+  background-color: #FFFFFF,
+  background-color-darker: #F2F6F9,
+
+  primary-color: #1E2A39,
+  secondary-color: #FF721E,
+);
+
+
+// Create functions to use on the theme
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+};
+
+@mixin desktop {
+  @media(min-width: #{$desktop-size}) {
+    @content
+  }
+};
+
+
+// Reset some basic elements
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+// Basic styling
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: color(text-color);
+  background-color: color(background-color);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: $bold-font-weight;
+  color: color(primary-color);
+}
+
+h1 {
+  font-size: 60px;
+}
+
+@import
+  "_sass/layout",
+  "_sass/syntax-highlighting"
