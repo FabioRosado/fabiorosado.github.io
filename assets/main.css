@@ -27,6 +27,17 @@ h1 {
   font-size: 60px;
 }
 
+header {
+  background-image: url(../assets/images/header.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #1E2A39;
+}
+
+nav {
+  padding: 1rem 0rem 0rem 3rem;
+}
+
 /**
 * Code Formatting
 */
