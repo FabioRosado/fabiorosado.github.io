@@ -27,15 +27,126 @@ h1 {
   font-size: 60px;
 }
 
+.horizontal-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.horizontal-list li {
+  padding-right: 15px;
+}
+
+.full-button {
+  cursor: pointer;
+  background-color: #FF721E;
+  color: #1E2A39;
+  font-family: "Jura", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: medium;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.full-button:hover {
+  background-color: #f95d00;
+  color: #2a3b50;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.fab {
+  color: #FF721E;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.fab:hover {
+  color: #ff6205;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
 header {
   background-image: url(../assets/images/header.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #1E2A39;
+  color: #FFFFFF;
 }
 
-nav {
+header nav {
   padding: 1rem 0rem 0rem 3rem;
+}
+
+@media (min-width: 940px) {
+  header nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4fr 2.5fr;
+        grid-template-columns: 4fr 2.5fr;
+  }
+}
+
+header nav .navigation {
+  display: none;
+  list-style-type: none;
+}
+
+@media (min-width: 940px) {
+  header nav .navigation {
+    display: block;
+  }
+}
+
+header nav li a {
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+@media (min-width: 940px) {
+  header nav li a {
+    float: left;
+    margin-right: 1.3rem;
+    padding: .2rem .5rem .2rem .5rem;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+  }
+}
+
+header nav li a:hover {
+  background-color: #FF721E;
+  color: #1E2A39;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+header .header-container {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 3fr;
+      grid-template-columns: 1.5fr 3fr;
+}
+
+header .intro {
+  padding-left: 3rem;
+}
+
+header .intro h1 {
+  padding: .5rem 0rem 0rem .5rem;
+  font-family: "Dancing Script", cursive;
+  color: #FFFFFF;
+}
+
+header .intro p {
+  padding-left: 1rem;
 }
 
 /**
