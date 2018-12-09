@@ -32,6 +32,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 1rem;
 }
 
 .horizontal-list li {
@@ -128,15 +129,18 @@ header nav li a:hover {
 
 header .header-container {
   padding-top: 3rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 3rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1.5fr 3fr;
-      grid-template-columns: 1.5fr 3fr;
+  -ms-grid-columns: 3fr 3fr;
+      grid-template-columns: 3fr 3fr;
+      grid-template-areas: "intro pictures" "intro pictures";
 }
 
 header .intro {
+  grid-area: "intro";
   padding-left: 3rem;
+  margin-right: 12rem;
 }
 
 header .intro h1 {
@@ -147,6 +151,50 @@ header .intro h1 {
 
 header .intro p {
   padding-left: 1rem;
+}
+
+header .pictures {
+  grid-area: "pictures";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 7rem;
+}
+
+header .pictures #box:nth-child(2) {
+  padding-left: 98px;
+  position: absolute;
+  top: 232px;
+}
+
+header .pictures #box {
+  position: relative;
+  margin: 0rem 4rem 4rem 0rem;
+  width: 180px;
+  margin-right: 1rem;
+}
+
+header .pictures #shadow {
+  position: absolute;
+  background: #F2F6F9;
+  width: 180px;
+  height: 180px;
+  top: 35px;
+  -webkit-clip-path: polygon(52% 1%, 100% 51%, 51% 100%, 0% 50%);
+          clip-path: polygon(52% 1%, 100% 51%, 51% 100%, 0% 50%);
+}
+
+header .pictures #frame {
+  width: 180px;
+  -webkit-clip-path: polygon(52% 10%, 98.44% 50.56%, 51% 89%, 1.45% 49.56%);
+          clip-path: polygon(52% 10%, 98.44% 50.56%, 51% 89%, 1.45% 49.56%);
+  background: #FF721E;
+}
+
+header .pictures #picture {
+  -webkit-clip-path: polygon(53% 11%, 99% 52%, 52% 91%, 3% 51%);
+          clip-path: polygon(53% 11%, 99% 52%, 52% 91%, 3% 51%);
+  width: 177px;
 }
 
 /**
