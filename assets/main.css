@@ -27,6 +27,22 @@ h1 {
   font-size: 60px;
 }
 
+@media (min-width: 970px) {
+  .visible-xs {
+    display: none;
+  }
+}
+
+.hidden-xs {
+  display: none;
+}
+
+@media (min-width: 970px) {
+  .hidden-xs {
+    display: block;
+  }
+}
+
 .horizontal-list {
   list-style-type: none;
   display: -webkit-box;
@@ -104,6 +120,8 @@ header nav .navigation {
 }
 
 header nav li a {
+  margin: .5rem 5rem 0rem 5rem;
+  text-align: center;
   display: block;
   color: #FFFFFF;
   text-decoration: none;
@@ -112,7 +130,7 @@ header nav li a {
 @media (min-width: 970px) {
   header nav li a {
     float: left;
-    margin-right: 1.3rem;
+    margin: 0rem 1.3rem 0rem 0rem;
     padding: .2rem .5rem .2rem .5rem;
     border-radius: 5px;
     -webkit-transition: background-color 0.5s ease-out;
@@ -121,10 +139,35 @@ header nav li a {
 }
 
 header nav li a:hover {
+  padding: .2rem .5rem .2rem .5rem;
+  border-radius: 5px;
+  margin: 0rem 5rem 0rem 5rem;
   background-color: #FF721E;
   color: #1E2A39;
   -webkit-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
+}
+
+@media (min-width: 970px) {
+  header nav li a:hover {
+    margin: 0rem 1.3rem 0rem 0rem;
+    -webkit-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+  }
+}
+
+header nav #collapseBtn {
+  float: right;
+  margin: 0rem 1.5rem;
+}
+
+header nav #collapseBtn .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px;
+  border-radius: 1px;
+  background-color: #1E2A39;
 }
 
 header .header-container {

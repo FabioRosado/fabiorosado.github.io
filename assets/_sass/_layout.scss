@@ -1,4 +1,18 @@
-// Contant classes
+// Constant classes
+
+.visible-xs {
+  @include desktop{
+    display: none;
+  }
+}
+
+.hidden-xs {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
 .horizontal-list {
   list-style-type: none;
   display: flex;
