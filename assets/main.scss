@@ -5,7 +5,7 @@
 @charset "utf-8";
 
 // Define the default values for each variable.
-$desktop-size: 940px;
+$desktop-size: 970px;
 
 $base-font-family: 'Jura', sans-serif;
 $base-font-size: 18px;
@@ -78,5 +78,6 @@ h1 {
 }
 
 @import
-  "_sass/layout",
-  "_sass/syntax-highlighting"
+  "_sass/_layout.scss",
+  "_sass/_header.scss",
+  "_sass/_syntax-highlighting.scss"
