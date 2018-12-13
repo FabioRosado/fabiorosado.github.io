@@ -13,7 +13,7 @@ $base-font-weight: 400;
 $bold-font-weight: 700;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
-$heading-font: 'Josefin Slab', serif;
+$heading-font: 'Jura', sans-serif;
 $cursive-font: 'Dancing Script', cursive;
 
 $spacing-unit: 30px;
@@ -80,4 +80,5 @@ h1 {
 @import
   "_sass/_layout.scss",
   "_sass/_header.scss",
+  "_sass/_home.scss",
   "_sass/_syntax-highlighting.scss"

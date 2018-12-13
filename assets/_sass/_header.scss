@@ -114,10 +114,10 @@ header {
   .pictures {
     grid-area: pictures;
     display: flex;
-    margin: 5rem 0rem 6rem 2rem;
+    margin: 5rem 0rem 8rem 2rem;
 
     @include desktop {
-      margin: 2rem 0rem 0rem 7rem;
+      margin: 2rem 0rem 0rem 9rem;
     }
 
     #box:nth-child(2) {

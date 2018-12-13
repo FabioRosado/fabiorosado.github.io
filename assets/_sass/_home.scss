@@ -1,0 +1,24 @@
+.about {
+  margin: 4rem 3rem 3rem 3rem;
+  @include desktop {
+    margin: 6rem 3rem 3rem 3rem;
+  }
+
+  .about-card {
+    background-color: color(primary-color);
+    color: color(secondary-color);
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+
+    h2 {
+      padding: .5rem 0rem 1rem 0rem;
+    }
+
+    p {
+      word-spacing: 15px;
+    }
+  }
+
+
+}
