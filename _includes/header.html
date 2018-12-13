@@ -26,7 +26,7 @@
         <div class="intro">
             <h1>Hello,</h1>
             <p>I’m Fabio, a Portuguese expat living in the UK. I’m currently working for an airline as cabin crew and learning how to code in my free time.</p>
-            <h1>Let's Chat!</h1>
+            <h1 class="margin-top">Let's Chat!</h1>
             <ul class="horizontal-list">
                 <li><a href="mailto:fabiorosado@outlook.com"><button class="full-button">Say Hello</button></a></li>
                 <li><a href="https://github.com/FabioRosado" target="_blank"><i class="fab fa-2x fa-github-square"></i></a></li>
@@ -51,64 +51,3 @@
         </div>
     </div>
 </header>
-
-<!-- <header>
-  <nav class="navbar navbar-expand-lg navbar-brand-color">
-      <a class="navbar-brand" href="/">
-          <img src="{{site.url}}/assets/images/logo.svg" width="35" height="35" alt="{{ site.title }}">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="/">Home</a>
-              </li>
-              {% for link in site.pages %}
-                  {% if link.title != None %}
-                  <li class="nav-item">
-                      <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
-                  </li>
-                  {% endif %}
-             {% endfor %}
-          </ul>
-          <div class="d-none d-md-block">
-              <ul class="navbar-nav nav-flex-icons">
-                  {% if site.github_username %}
-                       <li class="nav-item">
-                          <a class="nav-link" href="https://github.com/{{ site.github_username }}"><i class="fa fa-github"></i></a>
-                      </li>
-                  {% endif %}
-                  {% if site.twitter_username %}
-                      <li class="nav-item">
-                          <a class="nav-link" href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i></a>
-                      </li>
-                  {% endif %}
-                  {% if site.medium_username %}
-                      <li class="nav-item">
-                          <a class="nav-link" href="https://medium.com/@{{ site.medium_username }}"><i class="fa fa-medium"></i></a>
-                      </li>
-                  {% endif %}
-                  {% if site.facebook_username %}
-                      <li class="nav-item">
-                          <a class="nav-link" href="https://www.facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook"></i></a>
-                      </li>
-                  {% endif %}
-                  {% if site.instagram_username %}
-                      <li class="nav-item">
-                          <a class="nav-link" href="https://www.instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a>
-                      </li>
-                  {% endif %}
-                  {% if site.linkedin_username %}
-                       <li class="nav-item">
-                          <a class="nav-link" href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><i class="fa fa-linkedin"></i></a>
-                      </li>
-                  {% endif %}
-              </ul>
-          </div>
-      </div>
-  </nav>
-</header> -->
-

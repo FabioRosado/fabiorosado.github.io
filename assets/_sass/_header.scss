@@ -82,7 +82,7 @@ header {
     margin-right: 4rem;
     @include desktop {
       padding-left: $padding-unit * 2;
-      margin-right: 9rem;
+      margin: 2rem 3rem 5rem 3rem;
     }
 
     h1 {
@@ -93,6 +93,14 @@ header {
     p {
       padding-left: 1rem;
     }
+
+    .horizontal-list {
+      margin-left: 2rem;
+      @include desktop {
+        margin-left: 0rem;
+      }
+    }
+
     .horizontal-list li:nth-child(1) {
       position: absolute;
       margin-top: 3rem;
@@ -105,14 +113,11 @@ header {
 
   .pictures {
     grid-area: pictures;
-    display: grid;
-    margin: 2rem 0rem 0rem 3rem;
-    margin-left: 3rem;
+    display: flex;
+    margin: 5rem 0rem 6rem 2rem;
 
     @include desktop {
       margin: 2rem 0rem 0rem 7rem;
-      margin-left: 7rem;
-      display: flex;
     }
 
     #box:nth-child(2) {
