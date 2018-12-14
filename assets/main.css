@@ -106,9 +106,13 @@ h1 {
   margin-top: 1.5rem;
 }
 
+.section {
+  margin: 4rem 3rem 3rem 3rem;
+}
+
 @media (min-width: 970px) {
-  .center-text {
-    text-align: center;
+  .section {
+    margin: 6rem 3rem 3rem 3rem;
   }
 }
 
@@ -122,12 +126,34 @@ h1 {
   }
 }
 
+/************************************
+*     Anything Related to Fonts!    *
+************************************/
+@media (min-width: 970px) {
+  .center-text {
+    text-align: center;
+  }
+}
+
+.small-font {
+  font-size: 15.75px;
+}
+
+.spaced-text {
+  word-spacing: 15px;
+}
+
 .white-text {
   color: #FFFFFF;
 }
 
 .grey-text {
   color: #57606B;
+}
+
+.drop-shadow {
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -334,17 +360,7 @@ header .pictures #picture {
   width: 157px;
 }
 
-.about {
-  margin: 4rem 3rem 3rem 3rem;
-}
-
-@media (min-width: 970px) {
-  .about {
-    margin: 6rem 3rem 3rem 3rem;
-  }
-}
-
-.about .about-card {
+.about-card {
   background-color: #1E2A39;
   color: #FF721E;
   border-radius: 10px;
@@ -352,12 +368,48 @@ header .pictures #picture {
   text-align: center;
 }
 
-.about .about-card h2 {
-  padding: .5rem 0rem 1rem 0rem;
+.about-card h2 {
+  padding: 1rem 0rem 1rem 0rem;
 }
 
-.about .about-card p {
-  word-spacing: 15px;
+.project-card {
+  color: #FF721E;
+  background-color: #1E2A39;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card .project-image {
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  opacity: .8;
+}
+
+.project-card .category {
+  position: absolute;
+  right: 0;
+  color: #1E2A39;
+  background-color: #FF721E;
+  padding: .5rem 1rem .5rem 1rem;
+  border-radius: 0px 10px 0px 10px;
+}
+
+.project-card .project-name {
+  position: absolute;
+  top: 34%;
+  margin-left: 6rem;
+  margin-right: 3rem;
+  text-shadow: 1px 1px 2px #1E2A39;
+}
+
+.project-card .tools-used {
+  margin: 1rem 0rem 1.5rem 0rem;
+  background-color: #1E2A39;
+  text-align: center;
 }
 
 /**

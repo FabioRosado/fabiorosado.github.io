@@ -64,9 +64,11 @@
   margin-top: $padding-unit;
 }
 
-.center-text {
+
+.section {
+  margin: 4rem 3rem 3rem 3rem;
   @include desktop {
-    text-align: center;
+    margin: 6rem 3rem 3rem 3rem;
   }
 }
 
@@ -77,10 +79,32 @@
   }
 }
 
+/************************************
+*     Anything Related to Fonts!    *
+************************************/
+
+.center-text {
+  @include desktop {
+    text-align: center;
+  }
+}
+
+.small-font {
+  font-size: $small-font-size;
+}
+
+.spaced-text {
+  word-spacing: 15px;
+}
+
 .white-text {
   color: color(text-color-light);
 }
 
 .grey-text {
   color: color(text-color-grey);
+}
+
+.drop-shadow {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.10);
 }

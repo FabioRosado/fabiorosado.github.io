@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="about">
+<div class="section">
     <div class="container-middle center-text">
         <h1>About Me</h1>
         <p>
@@ -11,28 +11,55 @@ layout: default
         </p>
     </div>
     <div class="three-columns">
-        <div class="card">
+        <div class="about-card drop-shadow">
             <i class="fas fa-3x fa-language"></i>
             <h2 class="white-text">Languages</h2>
-            <p>HTML CSS Python</p>
-            <p>Javascript SASS</p>
+            <p class="spaced-text">HTML CSS Python</p>
+            <p class="spaced-text">Javascript SASS</p>
         </div>
-        <div class="card">
+        <div class="about-card drop-shadow">
             <i class="fas fa-3x fa-toolbox"></i>
             <h2 class="white-text">Dev Tools</h2>
-            <p>Pycharm Terminal</p>
-            <p>AdobeXD Postman</p>
-            <p>VSCode Tox Git</p>
+            <p class="spaced-text">Pycharm Terminal</p>
+            <p class="spaced-text">AdobeXD Postman</p>
+            <p class="spaced-text">VSCode Tox Git</p>
         </div>
-        <div class="about-card">
+        <div class="about-card drop-shadow">
             <i class="fas fa-3x fa-cogs"></i>
             <h2 class="white-text">Frameworks</h2>
-            <p>Jekyll Bulma </p>
-            <p>VueJS Electron</p>
-            <p>Bootstrap React</p>
+            <p class="spaced-text">Jekyll Bulma </p>
+            <p class="spaced-text">VueJS Electron</p>
+            <p class="spaced-text">Bootstrap React</p>
         </div>
     </div>
 </div>
+
+
+<div class="section">
+    <div class="container-middle center-text">
+        <h1>Projects</h1>
+    </div>
+    <div class="three-columns">
+        {% for project in site.categories.Projects limit: 3%}  
+
+        <div class="project-card">
+            <div class="category small-font">
+                {{ project.tag-icon }} {{ project.tag }}
+            </div>
+            <div class="project-name">
+                <h3 class="white-text">{{project.title}}</h3>
+            </div>
+            <img class="project-image" src="../assets/images/{{project.image}}">
+            <div class="tools-used spaced-text">
+                <p>Python NLTK Tweepy</p>
+            </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+
 
 <div class="content-start">
     <div class="col-sm-6 offset-sm-3 text-center">

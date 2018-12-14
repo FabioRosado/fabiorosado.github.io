@@ -1,24 +1,48 @@
-.about {
-  margin: 4rem 3rem 3rem 3rem;
-  @include desktop {
-    margin: 6rem 3rem 3rem 3rem;
+.about-card {
+  background-color: color(primary-color);
+  color: color(secondary-color);
+  border-radius: 10px;
+  padding: 3rem;
+  text-align: center;
+  h2 {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+}
+
+.project-card {
+  color: color(secondary-color);
+  background-color: color(primary-color);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+
+  .project-image {
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    opacity: .8;
   }
 
-  .about-card {
+  .category {
+    position: absolute;
+    right: 0;
+    color: color(primary-color);
+    background-color: color(secondary-color);
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+  .project-name {
+    position: absolute;
+    top: 34%;
+    margin-left: 6rem;
+    margin-right: 3rem;
+    text-shadow: 1px 1px 2px color(primary-color);
+  }
+  .tools-used {
+    margin: 1rem 0rem 1.5rem 0rem;
     background-color: color(primary-color);
-    color: color(secondary-color);
-    border-radius: 10px;
-    padding: 3rem;
     text-align: center;
-
-    h2 {
-      padding: .5rem 0rem 1rem 0rem;
-    }
-
-    p {
-      word-spacing: 15px;
-    }
   }
-
-
 }
