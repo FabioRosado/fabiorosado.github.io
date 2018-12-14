@@ -49,9 +49,18 @@ layout: default
             <div class="project-name">
                 <h3 class="white-text">{{project.title}}</h3>
             </div>
+            <div class="description">
+                <div class="white-text small-font">
+                    {{ project.excerpt | truncate: 165 }}
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="{{ project.url }}" class="trans-button"><i class="fas fa-folder-open"></i> Read more</a>
+                <a href="{{ project.source}}" class="trans-button margin-left" target="_blank"><i class="fab fa-github-square"></i> Source Code</a>
+            </div>
             <img class="project-image" src="../assets/images/{{project.image}}">
             <div class="tools-used spaced-text">
-                <p>Python NLTK Tweepy</p>
+                <p>{{ project.tech }}</p>
             </div>
             </div>
         {% endfor %}
