@@ -41,7 +41,7 @@ layout: default
     <div class="three-columns">
         {% for project in site.categories.Projects limit: 3%}  
 
-        <div class="project-card">
+        <div class="project-card drop-shadow">
             <div class="category small-font">
                 {{ project.tag-icon }} {{ project.tag }}
             </div>
@@ -66,50 +66,33 @@ layout: default
     </div>
 </div>
 
-
-<div class="content-start">
-    <div class="col-sm-6 offset-sm-3 text-center">
-      <img src="{{ site.url}}/assets/images/profile_pic.jpg" alt="{{ site.title }}" class="rounded-circle">
-      <h1 class="title drop-shadow"> {{ site.title }}</h1>
-      <h4 class="text-muted"> {{ site.description }}</h4>
-    </div>    
-    <div class="col-sm-6 offset-sm-3 text-center">
-      <ul class="social-link">
-            {% if site.github_username %}
-                <li class="social-media">
-                    <a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github"></i></a>
-                </li>
-            {% endif %}
-            {% if site.twitter_username %}
-                <li class="social-media">
-                    <a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i></a>
-                </li>
-            {% endif %}
-            {% if site.medium_username %}
-                <li class="social-media">
-                    <a href="https://medium.com/@{{ site.medium_username }}"><i class="fa fa-medium"></i></a>
-                </li>
-            {% endif %}
-            {% if site.facebook_username %}
-                <li class="social-media">
-                    <a href="https://www.facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook"></i></a>
-                </li>
-                {% endif %}
-            {% if site.instagram_username %}
-                <li class="social-media">
-                    <a href="https://www.instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a>
-                </li>
-            {% endif %}
-            {% if site.linkedin_username %}
-                <li class="social-media">
-                    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><i class="fa fa-linkedin"></i></a>
-                </li>
-            {% endif %}
-      </ul>
+<div class="section">
+    <div class="container-middle center-text">
+        <h1>Blog</h1>
     </div>
-  </div>
-  
-  
+    <div class="four-by-four">
+        {% assign post_counter = 0 %}
+        {% for post in site.posts %}
+            {% if post_counter >= 8 %}
+                {% break%}
+            {% elsif post.url contains 'projects' %}
+            {% else %}
+                {% assign post_counter = post_counter | plus: 1 %}
+                <div class="post-card">
+                    <a href="{{post.url}}">
+                        <div class="card-title">
+                            <span class="category">{{ post.category_icon }} {{ post.categories }}</span>
+                            <h4 class="white-text">{{ post.title }}</h4>
+    
+                        </div>
+                        <img class="post-image" src="{{site.url}}/assets/images/{{post.image}}" alt="{{post.title | escape}}">
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor%}
+    </div>
+</div>
+
 
   <!-- Blog Posts Area -->
   <div class="container">

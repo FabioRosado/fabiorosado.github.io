@@ -85,3 +85,40 @@
     visibility: visible;
   }
 }
+
+.post-card {
+  color: color(secondary-color);
+  background-color: color(primary-color);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+
+  .post-image {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    opacity: .8;
+  }
+
+  .card-title {
+    position: absolute;
+    bottom: 0;
+    margin: 0rem 1rem 1rem 1rem;
+
+    .category {
+      background-color: color(secondary-color);
+      color: color(primary-color);
+      font-family: $base-font-family;
+      border: 0;
+      border-radius: 5px;
+      padding: 5px;
+      font-size: small;
+    }
+
+    h4 {
+      margin-top: .5rem;
+    }
+  }
+}

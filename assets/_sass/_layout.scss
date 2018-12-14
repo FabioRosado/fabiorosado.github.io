@@ -79,6 +79,17 @@
   }
 }
 
+.four-by-four {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  @include desktop {
+    grid-gap: .5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repear(2, 1fr);
+  }
+}
+
 .margin-top {
   margin-top: $padding-unit;
 }
