@@ -6,6 +6,8 @@ categories: Projects
 tag: Voice Controlled
 tag-icon: <i class="fa fa-microphone" aria-hidden="true"></i>
 image: audiotodo.jpg
+source: https://github.com/opsdroid/skill-words
+tech: Python SpeechRecognition
 excerpt: A To-Do List controlled by voice commands that keeps track of unfinished items on a simple txt file.
 
 ---

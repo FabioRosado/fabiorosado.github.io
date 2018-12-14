@@ -6,6 +6,8 @@ categories: Projects
 tag: Sentiment Analysis
 tag-icon: <i class="fas fa-chart-pie"></i>
 image: tweetnalytics.jpg
+source: https://github.com/FabioRosado/tweetnalytic
+tech: Python NLTK Twython
 excerpt: Does sentiment analysis on a subject depending of opinions shared on twitter by using the NLTK library.
 
 ---

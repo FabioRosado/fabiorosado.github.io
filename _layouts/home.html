@@ -34,7 +34,6 @@ layout: default
     </div>
 </div>
 
-
 <div class="section">
     <div class="container-middle center-text">
         <h1>Projects</h1>
@@ -64,10 +63,8 @@ layout: default
             </div>
             </div>
         {% endfor %}
-        </div>
     </div>
 </div>
-
 
 
 <div class="content-start">
@@ -113,33 +110,7 @@ layout: default
   </div>
   
   
-  
-  <!-- Projects Area -->
-  <div class="container-fluid brandcolor-bg">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6 offset-sm-3 text-center">
-          <h1 class="white-text header drop-shadow">Projects</h1>
-        </div>
-      </div>
-        <div class="row">
-          {% for project in site.categories.Projects limit: 2%}  
-          <div class="col-md-6 col-sm-12">
-              <div class="card-image" style="background-image: url({{site.url}}/assets/images/{{project.image}});">
-              <div class="project-text text-center pad-left pad-right">
-                  <h5 class="project-tag"> {{ project.tag-icon }} {{ project.tag }}</h5>
-                  <h3 class="card-title white-text"> {{ project.title }}</h3>
-                  <p class="project-excerpt">{{ project.excerpt | truncate:165 }}</p>
-                  <a class="btn btn-brand drop-shadow" href="{{ project.url }}" role="button"><i class="fa fa-folder-open" aria-hidden="true"></i> View Project</a>
-              </div>
-              </div>
-          </div>
-          {% endfor %}  
-      </div>
-    </div>
-  </div>
-  
-  
+
   <!-- Blog Posts Area -->
   <div class="container">
     <div class="row header drop-shadow">
