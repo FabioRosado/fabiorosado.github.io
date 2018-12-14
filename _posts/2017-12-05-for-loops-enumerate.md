@@ -7,9 +7,9 @@ date:   2017-12-05 20:00:02 +0000
 categories: Python
 category_icon:  <i class="fa fa-code" aria-hidden="true"></i>
 image: enumerate.jpg
-excerpt: 
+excerpt: The enumerate built-in function it's a great way to iterate over something. Your code will be more readable and you have some flexibility when looping.
 ---
-The enumerate built-in function it's a great way to iterate over something. Your code will be more readable, but you have some flexibility when building a loop. You can use enumerate in any sequence, iterator or another object that supports iteration.
+The enumerate built-in function it's a great way to iterate over something. Your code will be more readable and you have some flexibility when building a loop. You can use enumerate in any sequence, iterator or another object that supports iteration.
 
 Instead of writing a loop like this `for i in range(len(foo))` to get the index of `foo` a better way would be to use the enumerate, because this function returns the index and value of `foo`. 
 
