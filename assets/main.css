@@ -145,6 +145,10 @@ a {
   }
 }
 
+.margin-bottom {
+  margin-bottom: 1.5rem;
+}
+
 .margin-top {
   margin-top: 1.5rem;
 }
@@ -516,10 +520,19 @@ header .pictures #picture {
 .post-card .post-image {
   border-radius: 10px;
   overflow: hidden;
+  display: block;
   width: 100%;
   position: relative;
   z-index: -1;
   opacity: .8;
+}
+
+.post-card .description {
+  visibility: hidden;
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  margin: 0rem 1rem 1rem 1rem;
 }
 
 .post-card .card-title {
@@ -538,8 +551,27 @@ header .pictures #picture {
   font-size: small;
 }
 
+.post-card .card-title .fab {
+  color: #1E2A39;
+}
+
 .post-card .card-title h4 {
   margin-top: .5rem;
+}
+
+.post-card:hover .post-image {
+  opacity: .3;
+  overflow: hidden;
+  -webkit-transition: all .5 ease-in-out;
+  transition: all .5 ease-in-out;
+}
+
+.post-card:hover .description {
+  visibility: visible;
+}
+
+.post-card:hover .card-title {
+  visibility: hidden;
 }
 
 /**

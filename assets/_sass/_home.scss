@@ -96,10 +96,19 @@
   .post-image {
     border-radius: 10px;
     overflow: hidden;
+    display: block;
     width: 100%;
     position: relative;
     z-index: -1;
     opacity: .8;
+  }
+
+  .description {
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    margin: 0rem 1rem 1rem 1rem;
   }
 
   .card-title {
@@ -117,8 +126,26 @@
       font-size: small;
     }
 
+    .fab {
+      color: color(primary-color);
+    }
+
     h4 {
       margin-top: .5rem;
     }
+  }
+}
+
+.post-card:hover {
+  .post-image {
+    opacity: .3;
+    overflow: hidden;
+    transition: all .5 ease-in-out;
+  }
+  .description {
+    visibility: visible;
+  }
+  .card-title {
+    visibility: hidden;
   }
 }

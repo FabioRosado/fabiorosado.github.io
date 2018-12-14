@@ -80,10 +80,13 @@ layout: default
                 {% assign post_counter = post_counter | plus: 1 %}
                 <div class="post-card">
                     <a href="{{post.url}}">
+                        <div class="description">
+                            <p class="white-text small-font margin-bottom">{{ post.excerpt | truncate:160 }}</p>
+                            <span class="trans-button">Read More <i class="fas fa-angle-double-right"></i></span>
+                        </div>
                         <div class="card-title">
                             <span class="category">{{ post.category_icon }} {{ post.categories }}</span>
                             <h4 class="white-text">{{ post.title }}</h4>
-    
                         </div>
                         <img class="post-image" src="{{site.url}}/assets/images/{{post.image}}" alt="{{post.title | escape}}">
                     </a>
