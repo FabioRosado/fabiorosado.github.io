@@ -3,8 +3,40 @@ layout: default
 ---
 
 <div class="section">
+        <div class="container-middle center-text">
+            <h1>Projects</h1>
+        </div>
+        <div class="three-columns">
+            {% for project in site.categories.Projects limit: 3%}  
+    
+            <div class="project-card drop-shadow">
+                <div class="category small-font">
+                    {{ project.tag-icon }} {{ project.tag }}
+                </div>
+                <div class="project-name">
+                    <h3 class="white-text">{{project.title}}</h3>
+                </div>
+                <div class="description">
+                    <div class="white-text small-font">
+                        {{ project.excerpt | truncate: 165 }}
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="{{ project.url }}" class="trans-button"><i class="fas fa-folder-open"></i> Read more</a>
+                    <a href="{{ project.source}}" class="trans-button margin-left" target="_blank"><i class="fab fa-github-square"></i> Source Code</a>
+                </div>
+                <img class="project-image" src="../assets/images/{{project.image}}">
+                <div class="tools-used spaced-text">
+                    <p>{{ project.tech }}</p>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+</div>
+
+<div class="section">
     <div class="container-middle center-text">
-        <h1>About Me</h1>
+        <h1><a name="about">About Me</a></h1>
         <p>
             I've always been interested in coding and creating my own programs. After completing the online course Intro to CS and programming with python from MIT at edx.org
             I've decided that it was time to dedicate my free time to learn more about coding.  MY goal is to become a good developer and work in challenging new things.
@@ -31,38 +63,6 @@ layout: default
             <p class="spaced-text">VueJS Electron</p>
             <p class="spaced-text">Bootstrap React</p>
         </div>
-    </div>
-</div>
-
-<div class="section">
-    <div class="container-middle center-text">
-        <h1>Projects</h1>
-    </div>
-    <div class="three-columns">
-        {% for project in site.categories.Projects limit: 3%}  
-
-        <div class="project-card drop-shadow">
-            <div class="category small-font">
-                {{ project.tag-icon }} {{ project.tag }}
-            </div>
-            <div class="project-name">
-                <h3 class="white-text">{{project.title}}</h3>
-            </div>
-            <div class="description">
-                <div class="white-text small-font">
-                    {{ project.excerpt | truncate: 165 }}
-                </div>
-            </div>
-            <div class="buttons">
-                <a href="{{ project.url }}" class="trans-button"><i class="fas fa-folder-open"></i> Read more</a>
-                <a href="{{ project.source}}" class="trans-button margin-left" target="_blank"><i class="fab fa-github-square"></i> Source Code</a>
-            </div>
-            <img class="project-image" src="../assets/images/{{project.image}}">
-            <div class="tools-used spaced-text">
-                <p>{{ project.tech }}</p>
-            </div>
-            </div>
-        {% endfor %}
     </div>
 </div>
 
