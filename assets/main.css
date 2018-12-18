@@ -705,6 +705,10 @@ footer .navigation {
   }
 }
 
+footer .navigation .horizontal-list {
+  padding-top: 0;
+}
+
 /**
 * Code Formatting
 */
