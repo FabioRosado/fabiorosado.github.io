@@ -657,6 +657,54 @@ header .pictures #picture {
   padding-top: 2rem;
 }
 
+footer {
+  background-color: #1E2A39;
+  font-size: medium;
+  color: #FFFFFF;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  padding: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1160px) {
+  footer {
+    grid-auto-flow: column;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+footer .fa-heart {
+  color: red;
+}
+
+footer .fa-code {
+  color: #FF721E;
+}
+
+footer a {
+  color: #FFFFFF;
+}
+
+footer a:hover {
+  color: #FF721E;
+  -webkit-transition: color .5s ease-out;
+  transition: color .5s ease-out;
+}
+
+footer .navigation {
+  position: relative;
+}
+
+@media (min-width: 1160px) {
+  footer .navigation {
+    position: absolute;
+    right: 0;
+  }
+}
+
 /**
 * Code Formatting
 */
