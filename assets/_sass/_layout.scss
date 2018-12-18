@@ -36,7 +36,7 @@
 }
 
 .full-button:hover {
-  background-color: darken(color(secondary-color), 7%);
+  background-color: lighten(color(secondary-color), 7%);
   color: lighten(color(primary-color), 7%);
   transition: background-color 0.5s ease-out;
 }
@@ -60,12 +60,39 @@
   }
 }
 
+.white-button {
+  cursor: pointer;
+  color: color(primary-color);
+  background: color(text-color-light);
+  font-family: $base-font-family;
+  font-size: medium;
+  border: 1px solid color(text-color-light);
+  border-radius: 5px;
+  padding: 8px;
+  transition: background-color 0.5s ease-out;
+}
+
+.white-button:hover {
+  cursor: pointer;
+  color: color(primary-color);
+  background: color(secondary-color);
+  font-family: $base-font-family;
+  font-size: small;
+  border: 1px solid color(secondary-color);
+  border-radius: 5px;
+  padding: 8px;
+  transition: background-color 0.5s ease-out;
+  @include desktop {
+    font-size: medium;
+  }
+}
+
 .fab {
   color: color(secondary-color);
   transition: background-color 0.5s ease-out;
 }
 .fab:hover {
-  color: darken(color(secondary-color), 5%);
+  color: lighten(color(secondary-color), 5%);
   transition: background-color 0.5s ease-out;
 }
 

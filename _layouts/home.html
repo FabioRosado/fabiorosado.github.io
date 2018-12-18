@@ -82,7 +82,7 @@ layout: default
                     <a href="{{post.url}}">
                         <div class="description">
                             <p class="white-text small-font margin-bottom">{{ post.excerpt | truncate:160 }}</p>
-                            <span class="trans-button">Read More <i class="fas fa-angle-double-right"></i></span>
+                            <span class="trans-button small-font">Read More <i class="fas fa-angle-double-right"></i></span>
                         </div>
                         <div class="card-title">
                             <span class="category">{{ post.category_icon }} {{ post.categories }}</span>
@@ -96,31 +96,17 @@ layout: default
     </div>
 </div>
 
-
-  <!-- Blog Posts Area -->
-  <div class="container">
-    <div class="row header drop-shadow">
-      <div class="col-sm-6 offset-sm-3 text-center">
-        <h1 class="brand-text"> Recent Posts</h1>
-      </div>
-    </div>    
-    <div class="row">
-      {% assign post_counter = 0 %}
-      {% for post in site.posts %}
-        <!-- Skips over projects, adds only the first 3 recent posts -->
-        {% if post_counter >= 3 %}
-          {% break %}
-        {% elsif post.url contains 'projects' %}
-        {% else %}
-          {% assign post_counter = post_counter | plus: 1 %}
-          <div class="col-md-4 col-sm-12 text-center recent-posts">
-            <a href="{{post.url}}"><img class="img-fluid post-image" src="{{site.url}}/assets/images/{{post.image}}" alt={{post.title | escape}}></a>
-            <h6 class="spaced">{{ post.category_icon }} {{ post.categories }} </h6>
-            <h2 class="dark-text"> {{ post.title }} </h2>
-            <p>{{ post.excerpt | truncate:165}}</p>
-            <a class="btn btn-brand drop-shadow" href="{{ post.url }}" role="button"> Read More</a>
-          </div>
-        {% endif %}
-      {% endfor %}
-      </div>      
-  </div>
+<div class="contact-area">
+    <div class="contact-text">
+        <h1>Contact Me</h1>
+        <p>Want to get in touch with me? Request more information about myself or my experience? Would you like to know what is my favourite ice cream or pizza? Send me an email or find me on social media, I will reply as quick as possible. I'm always happy to have a chat!</p>
+        <ul class="horizontal-list">
+            <li><a href="mailto:{{ site.email }}"><button class="white-button">Say Hello</button></a></li>
+            <li><a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-2x fa-github-square"></i></a></li>
+            <li><a href="https://dev.to/{{ site.dev_username }}/" target="_blank"><i class="fab fa-2x fa-dev"></i></i></a></li>
+            <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fab fa-2x fa-twitter-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank"><i class="fab fa-2x fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/{{ site.instagram_username }}/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>

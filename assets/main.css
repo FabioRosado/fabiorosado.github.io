@@ -73,7 +73,7 @@ a {
 }
 
 .full-button:hover {
-  background-color: #f95d00;
+  background-color: #ff8842;
   color: #2a3b50;
   -webkit-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
@@ -101,6 +101,38 @@ a {
   color: #1E2A39;
 }
 
+.white-button {
+  cursor: pointer;
+  color: #1E2A39;
+  background: #FFFFFF;
+  font-family: "Jura", sans-serif;
+  font-size: medium;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  padding: 8px;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.white-button:hover {
+  cursor: pointer;
+  color: #1E2A39;
+  background: #FF721E;
+  font-family: "Jura", sans-serif;
+  font-size: small;
+  border: 1px solid #FF721E;
+  border-radius: 5px;
+  padding: 8px;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+@media (min-width: 1160px) {
+  .white-button:hover {
+    font-size: medium;
+  }
+}
+
 .fab {
   color: #FF721E;
   -webkit-transition: background-color 0.5s ease-out;
@@ -108,7 +140,7 @@ a {
 }
 
 .fab:hover {
-  color: #ff6205;
+  color: #ff8238;
   -webkit-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
 }
@@ -530,7 +562,7 @@ header .pictures #picture {
 .post-card .description {
   visibility: hidden;
   position: absolute;
-  top: 10%;
+  top: 13%;
   text-align: center;
   margin: 0rem 1rem 1rem 1rem;
 }
@@ -568,10 +600,61 @@ header .pictures #picture {
 
 .post-card:hover .description {
   visibility: visible;
+  -webkit-transition: all .5 ease-in-out;
+  transition: all .5 ease-in-out;
 }
 
 .post-card:hover .card-title {
   visibility: hidden;
+  -webkit-transition: all .5 ease-in-out;
+  transition: all .5 ease-in-out;
+}
+
+.contact-area {
+  color: #FFFFFF;
+  background-image: url(../assets/images/annie-spratt-608001-unsplash.jpg);
+  background-size: cover;
+  margin-top: 4rem;
+}
+
+@media (min-width: 1160px) {
+  .contact-area {
+    margin-top: 6rem;
+  }
+}
+
+.contact-area h1 {
+  font-family: "Dancing Script", cursive;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.contact-area .contact-text {
+  padding: 2rem;
+  margin-right: 0rem;
+}
+
+@media (min-width: 1160px) {
+  .contact-area .contact-text {
+    padding: 4rem;
+    margin-right: 31%;
+    margin-left: 31%;
+    text-align: justify;
+  }
+}
+
+.contact-area .contact-text .fab {
+  color: #FFFFFF;
+}
+
+.contact-area .contact-text .fab:hover {
+  color: #FF721E;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+
+.contact-area .contact-text .horizontal-list {
+  padding-top: 2rem;
 }
 
 /**

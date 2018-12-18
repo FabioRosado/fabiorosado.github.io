@@ -106,7 +106,7 @@
   .description {
     visibility: hidden;
     position: absolute;
-    top: 10%;
+    top: 13%;
     text-align: center;
     margin: 0rem 1rem 1rem 1rem;
   }
@@ -144,8 +144,48 @@
   }
   .description {
     visibility: visible;
+    transition: all .5 ease-in-out;
   }
   .card-title {
     visibility: hidden;
+    transition: all .5 ease-in-out;
+  }
+}
+
+.contact-area {
+  color: color(text-color-light);
+  background-image: url(../assets/images/annie-spratt-608001-unsplash.jpg);
+  background-size: cover;
+  margin-top: 4rem;
+  @include desktop {
+    margin-top: 6rem;
+  }
+
+  h1 {
+    font-family: $cursive-font;
+    color: color(text-color-light);
+    margin-bottom: 1rem;
+  }
+
+  .contact-text {
+    padding: 2rem;
+    margin-right: 0rem;
+    @include desktop {
+      padding: 4rem;
+      margin-right: 31%;
+      margin-left: 31%;
+      text-align: justify;
+    }
+    .fab {
+      color: color(text-color-light);
+    }
+
+    .fab:hover {
+      color: color(secondary-color);
+      transition: color 0.5s ease-out;
+    }
+    .horizontal-list {
+      padding-top: 2rem;
+    }
   }
 }
