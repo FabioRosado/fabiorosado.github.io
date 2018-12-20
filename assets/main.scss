@@ -73,9 +73,9 @@ h1, h2, h3, h4, h5, h6 {
   color: color(primary-color);
 }
 
-h1 {
-  font-size: 60px;
-}
+// h1 {
+//   font-size: 60px;
+// }
 
 a {
   text-decoration: none;
@@ -85,5 +85,6 @@ a {
   "_sass/_layout.scss",
   "_sass/_header.scss",
   "_sass/_home.scss",
-  "_sass/footer.scss",
+  "_sass/_footer.scss",
+  "_sass/_post.scss",
   "_sass/_syntax-highlighting.scss"

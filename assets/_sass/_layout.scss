@@ -125,12 +125,15 @@
   margin-top: $padding-unit;
 }
 
+.padding-bottom {
+  padding: $padding-unit;
+}
+
 .margin-left {
   @include desktop {
     margin-left: 1rem;
   }
 }
-
 
 .section {
   margin: 4rem 3rem 3rem 3rem;
@@ -144,6 +147,11 @@
   @include desktop {
     margin: 0rem 10rem 5rem 10rem;
   }
+}
+
+
+.primary-background {
+  background-color: color(primary-color);
 }
 
 /************************************
