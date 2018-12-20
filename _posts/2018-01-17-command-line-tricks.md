@@ -16,17 +16,18 @@ Working with the command line can be fun. But the more you use the command line,
 Luckily there are some easy to remember commands that will help you cut down time when repeating commands.
 
 # History  - Using reverse-i-search
+
 Reverse-i-search will search through the whole `history` to match a command that contains what you typed. You will need to activate reverse-i-search by pressing the keys `CTRL+R`, your prompt will switch to ```(reverse-i-search)`':```
 
 With reverse-i-search activated, you can type the beginning of a command and the last one that was run will be matched. If you want to cycle through all matches you just need to press `CTRL+R` again.
 
 If you know that you are going to use a command a lot you can write the command like this:
- 
+
  ```<command> #tag```
 
 Then all you need is run the reverse-i-search and search for `#`, your command will be matched straight away. Since the # indicates a start of a comment the terminal will simply ignore the text `#tag`.
 
-#### Examples:
+## Examples
 
 History:
 ```
@@ -57,15 +58,16 @@ Now let's use the tag trick to run the first command in our history. Let's rever
 
 
 # History - Using !
+
 If you run the command `history` you can see a long list with all the commands that you have typed in the command line. To re-run a command you can do one of these two ways:
 - Type: `!<number of the command>`
 - Type `!<first letters of command>`
 
-For you to use the number of the command you probably would have to run `history`, then get the number and type `!<number of the command>`, in some cases this will take even longer than typing the command again. 
+For you to use the number of the command you probably would have to run `history`, then get the number and type `!<number of the command>`, in some cases this will take even longer than typing the command again.
 
 But since you know which command you want to run, you can simply type `!<first letters of command>` and those first letters will be matched to a command. This little trick can save you some precious time.
 
-#### Examples:
+## Examples
 
 History:
 ```
@@ -107,12 +109,14 @@ folder
 
 
 # Autocomplete
+
 Typing long commands can take a while, luckily your terminal can autocomplete commands for you, all you need to do is start typing a few letters and press the `TAB` key and the command will be auto-completed.
 
 If you forgot how do you type a command, but you know the first letter, you can type the first letter and press the `TAB` key twice, a long list of all available commands will appear and you can use that to help you.
 
 
-## Examples:
+## Examples
+
 Let's look for a command that starts with the letter K:
 
 ```

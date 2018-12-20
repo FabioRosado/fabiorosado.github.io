@@ -160,7 +160,7 @@ let weatherApp = new Vue({
     pressure: '',
     humidity: '',
     wind: '',
-    overcast: '', 
+    overcast: '',
     icon: '',
     location: ''
   },

@@ -598,6 +598,7 @@ nav #collapseBtn .icon-bar {
 
 .post-card .card-title h4 {
   margin-top: .5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .post-card:hover .post-image {
@@ -841,7 +842,7 @@ footer .navigation .horizontal-list {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.blog-container {
+.page-container {
   margin: 2rem;
   display: -ms-grid;
   display: grid;
@@ -849,10 +850,25 @@ footer .navigation .horizontal-list {
 }
 
 @media (min-width: 1160px) {
-  .blog-container {
+  .page-container {
     margin: 3rem;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.projects-container {
+  margin: 2rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 1160px) {
+  .projects-container {
+    margin: 3rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 

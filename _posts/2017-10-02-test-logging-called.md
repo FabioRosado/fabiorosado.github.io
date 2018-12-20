@@ -14,10 +14,7 @@ While creating a function that uses `logging.info` to log useful information on 
 
 Opsdroid uses a file named `configuration.yml` to keep track of all the configuration details. Upon the suggestion of Jacob(the creator and maintainer of the project) a `welcome-message: true` line was added to the configuration file in case the user wishes to hide the welcome message.
 
-&nbsp;
 # The Function
-------
-&nbsp;
 
 The `welcome_message` function is a very basic function that uses the `logging.info` to log a quick get started information about Opsdroid.
 
@@ -40,10 +37,7 @@ The `welcome_message` function is a very basic function that uses the `logging.i
 16         pass
 {% endhighlight %}
 
-&nbsp;
 # The Test
-------
-&nbsp;
 
 {% highlight python %}
 1   def test_welcome_message(self):
@@ -59,12 +53,7 @@ The `welcome_message` function is a very basic function that uses the `logging.i
 - On line 4 we make a call to the `welcome_message` function using the dummy config file (which will always return the `LOGGER.info` lines)
 - On line 5 `logmock.called` will return a boolean whether the mocked object has been called. Since we are sure that the dummy config file will always return True we do a simple `assertTrue` to see if `opsdroid.__main__.LOGGER.info` was called.
 
-&nbsp;
 # Final Thoughts
-------
-&nbsp;
 
 This was the best I could come up with to test if the `logging.info` method was called.
 Have you ever came up with the need to assert if this method was called successfully? How did you solve this issue?
-
-&nbsp;

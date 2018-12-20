@@ -7,20 +7,17 @@ date:   2017-10-11 10:01:02 +0100
 categories: GitHub
 category_icon: <i class="fas fa-code-branch"></i>
 image: git-recover.jpg
-excerpt: 
+excerpt: Deleting files doesn't mean deleted permanently, learn how to turn back time and recover deleted files.
 ---
 
 I created a Pull Request that added Issue/PR templates to opsdroid. Then I had to re-do the code bit on the Issue template. Since I'm trying to keep my commits tidy I did a rebase merging the recent fix into the previous commit and pushed it to GitHub.
-Meanwhile a new PR had been merged to the project so I had to pull those changes before pushing my ones to the main repo. 
+Meanwhile a new PR had been merged to the project so I had to pull those changes before pushing my ones to the main repo.
 
 When I checked the files in GitHub, the Pull Request was showing changes that had been done in a previous PR made by me. Worst was when I checked my local files and noticed that the templates had just vanished.
 
 At first that "Oh no!" moment hit, then I remembered that in git, files are not really deleted so I could go back in time and I  could correct the mess and recover the two files that I was trying to include in my PR.
 
-&nbsp;
 # Git Reflog
------
-&nbsp;
 
 Reflogs(reference logs) are used by git to keep track of all the updates done on a repository's branch. They are basically the history of your repository and the great thing about them is that you can see everything that was done on the repo(even rebases).
 
@@ -47,11 +44,7 @@ You can see that HEAD is currently at position **HEAD@{0}**, it has the SHA-1 ke
 
 So if you want to fix some issue on the commit **bd96dd5 HEAD@{5}: commit: Update projects and hacktoberfest post** all you need to do is run the command `git checkout bd96dd5` or `git checkout HEAD@{5}`. Just be aware that HEAD will be in a detached state from now on until you either checkout to master or a new branch.
 
-
-&nbsp;
 # Detached Head
------
-&nbsp;
 
 HEAD in Git is the marker that points to a branch reference and the branch points to the latest commit. So when HEAD gets detached it means that it is not pointing to a branch reference. If you do `git checkout <SHA-1 of a commit>` HEAD will now point to this commit instead of a branch.
 
@@ -74,10 +67,7 @@ HEAD is now at <SHA-1 key>... <commit message> (#<issue number>)
 
 As you can see by the warning message, even if you are in a detached state, you can still make changes, look around, discard commits or make new commits. So if you commit something and want to keep those changes, all you need to do is create a new branch and your changes will be shown there.
 
-&nbsp;
 # The Solution
------
-&nbsp;
 
 The first step is not to panic. Like I mentioned before, when you use git nothing is really lost so you can always retrieve something, even if it was deleted.
 
@@ -87,7 +77,7 @@ The third step is to create a temporary branch to store the changes. Run the com
 
 _note: I'm using the master branch as an example, if you are using another branch just use that name instead_
 
-The fourth step is to update the master branch to point to the temp branch. Run the command `git checkout -B master temp` to update and checkout into the master branch. Now all the changes that were once lost should be visible in the master branch. 
+The fourth step is to update the master branch to point to the temp branch. Run the command `git checkout -B master temp` to update and checkout into the master branch. Now all the changes that were once lost should be visible in the master branch.
 
 You can now delete the temp branch with the command `git branch -d temp` and push the changes to GitHub (_note: you might need to force push the changes with the command `git push -f`_).
 

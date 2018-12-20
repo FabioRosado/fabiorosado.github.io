@@ -11,10 +11,7 @@ tech: VueJS Bulma HTML/CSS
 excerpt: A landing page that shows quotes, current weather and time, it also has a list of to do and notes.
 ---
 
-&nbsp;
 # Overview
------
-&nbsp;
 
 - **The Good**
   - The background updates depending on the weather outside
@@ -30,10 +27,7 @@ excerpt: A landing page that shows quotes, current weather and time, it also has
   - Used mostly ES6 syntax - not compatible with some browsers
   - The API key for openweathermap shouldn't be hardcoded on the `main.js` file
 
-&nbsp;
 # Explanation
------
-&nbsp;
 
 The idea of creating a Landing page that shows quotes and the current weather came to me when doing the challenges on freecodecamp. Two of the javascript challenges were to create two separated apps - one a weather station, one for quotes.
 
@@ -51,17 +45,13 @@ Working on the To Do List created some issues - I thought you could create diffe
 
 How to create a notes app kind of puzzled me, but in the end, I figured that it could be nothing more than an extended version of the To Do List so hack away I went and managed to make it work after struggling with a few bits.
 
-### Few things I'm happy with
+# Few things I'm happy with
 
 - How I used GravitDesigner to mock the landing page and use it while coding the page
 - How I used VueJs to hide/unhide elements of the lists
 - How I learned about things I needed to change in the app by observing my fiancé and mom using the landing page
 - How I implemented a sort of Scrum board with trello to implement this project - it was good practice
 
-
-&nbsp;
 # Info
------
-&nbsp;
 
 GitHub repo: [https://github.com/FabioRosado/landing-page/](https://github.com/FabioRosado/landing-page/)

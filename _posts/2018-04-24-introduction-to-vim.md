@@ -23,6 +23,7 @@ If you are on windows you could download it from [vim.org](https://www.vim.org/d
 # Vim Modes
 
 Vim comes with three different modes:
+
 - Normal Mode (Default mode)
 - Insert Mode (Press _i_ key)
 - Visual Mode (Press _v_ key)
@@ -33,9 +34,9 @@ The normal mode is the default mode and the one activated as soon as you open Vi
 
 ## Editing text
 
-If you want to edit the text you can just press the _i_ key on your keyboard you can notice that the bottom left corner of the window now shows the text: --INSERT--. 
+If you want to edit the text you can just press the _i_ key on your keyboard you can notice that the bottom left corner of the window now shows the text: --INSERT--.
 
-You will now be able to use your terminal as a text editor, you can add, edit and delete text like you would do in any other text editor. 
+You will now be able to use your terminal as a text editor, you can add, edit and delete text like you would do in any other text editor.
 
 Once you are happy with the changes that you have just made, press the _esc_ key on your keyboard and you will be back to the Normal mode.
 
@@ -64,7 +65,7 @@ Now that you know how to edit a text in Vim, the most important thing you will l
 
 To save a file all you need to do is type `:w` and then press enter.
 
-To quit a file and go back to the command line you need to type `:q`. 
+To quit a file and go back to the command line you need to type `:q`.
 
 Note that if you made changes to the file and didn't save them, Vim won't automatically exit, instead, it will tell you to run the command `:q!` which basically translates to force quit.
 

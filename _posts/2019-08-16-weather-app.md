@@ -15,9 +15,7 @@ In this article, I'm not going to write a walkthrough on how to solve this chall
 
 What I am going to show you, is how to use Vue and Axios to connect to the [OpenWeatherMap Api](https://openweathermap.org), get the weather data from a town(London) and display it.
 
-
-
-## The OpenWeatherMap API
+# The OpenWeatherMap API
 
 In order for you to connect to the API you need an API Key, otherwise, the server will just reject your connection attempt.
 
@@ -36,7 +34,7 @@ In this article, I am declaring **metric (Celsius)** as the unit and **London** 
 
 `http://api.openweathermap.org/data/2.5/weather` + `?q=London` +`&?units=metric` + `&APPID={API KEY}`
 
-I have divided the link, so you can see how to add parameters to the API endpoint to get the data that you want. 
+I have divided the link, so you can see how to add parameters to the API endpoint to get the data that you want.
 
 This is how the API link will look like:
 
@@ -44,9 +42,7 @@ This is how the API link will look like:
 
 If you add your API Key at the end of the link and paste it into your browser, you will get all the data you need. Now, all we have to do, is to get that data into Vue.
 
-
-## Getting the Weather Data with Axios
-
+# Getting the Weather Data with Axios
 
 In Javascript, you can use different tools to get data from an API. In this article, I am using axios. The way you get data from the API doesn't really change much. If you use a different tool you shouldn't have any issues.
 
@@ -69,12 +65,11 @@ axios
 });
 ```
 
-If you are wondering why we are getting `response.data` and not just response, the reason for this is simple. The `response` will not only return the data, but also status code, headers and the type of request made. 
+If you are wondering why we are getting `response.data` and not just response, the reason for this is simple. The `response` will not only return the data, but also status code, headers and the type of request made.
 
 Use the OpenWeatherMap URL and add another `console.log(response);` and see what you get when you run the code.
 
-
-## Creating the Vue app
+# Creating the Vue app
 
 I am not going into depth about [VueJs](https://vuejs.org/v2/guide/) or how to create an app with it. But the very quick basics is that you create an app by triggering the Vue object to a div id.
 
@@ -84,7 +79,7 @@ A Vue app looks like this:
 let weather = new Vue ({
   el: "#app",
   data: {
-    
+
   },
   methods: {
   
@@ -102,14 +97,12 @@ In order to use VueJs you have to install it either with the command, `npm insta
 
 I hope this very quick and brief introduction helps you to make sense of things with Vue if you don't know anything about this framework.
 
-
-
-## Building the Weather App
+# Building the Weather App
 
 Now that we have the basic knowledge on how to connect to the OpenWeatherMap API, how to use axios and how to create a Vue app, I will show you how to create the weather app.
 
 
-### HTML & CSS
+## HTML & CSS
 The HTML for the app will be quite basic. The page will have a background and a centre div with the `id="app"` that Vue will use. This div will also have a simple background image just to make it look nicer.
 
 So, let's start by creating the HTML code. We will import our `css` and `js` files to have a working webpage, we will also import VueJs, axios and the two fonts that we will use in our app.
@@ -164,7 +157,7 @@ Now that the skeleton of the page is done, we need to update our `main.css` file
 
 _Note: The code that I am going to show you here isn't responsive and it's a bit hacky. I'm sure there is a better way to do things, but it will do for the purpose of this tutorial._
 
-#### main.css File
+### main.css File
 
 ```css
 body {
@@ -225,7 +218,7 @@ body {
 }
 ```
 
-#### index.html file
+### index.html file
 
 ```html
 <!doctype html>
@@ -261,15 +254,13 @@ body {
 </html>
 ```
 
-
 If you try to open the page you will notice that the app doesn't look that great at the moment, that's because we don't have Vue doing the heavy lifting for us. Let's go ahead and fix this.
-
 
 _Note: that I'm using SVG files for the weather app background and icons, you can get the files [here](https://github.com/FabioRosado/fabiorosado.github.io/tree/master/assets/files/weather-tutorial)_.
 
 
+# Vue
 
-### Vue
 Vue and axios are already imported through the script tag located in our html code, what means that we are ready to start giving shape to our app.
 
 ```js
@@ -292,7 +283,6 @@ The code will be pretty straightforward, we initiate a new Vue app attached to t
 
 Also, we declare a method called `getWeather`, this is the method that will use axios to get all the information we need from the OpenWeatherMap API.
 
-
 We want the weather app to show the current weather and other weather information such as:
 
 * Minimum temperature for the day
@@ -307,7 +297,7 @@ The API will return all of these details so we don't need to do much. Inside our
 
 The data object inside our VueJs will look like this:
 
-```
+```js
 data: {
   currentTemp: '',
   minTemp: '',
@@ -323,7 +313,7 @@ data: {
 
 ```
 
-#### Getting API Data with Axios
+## Getting API Data with Axios
 
 The OpenWeatherMap API returns a JSON response that looks like this:
 
@@ -396,17 +386,16 @@ getWeather() {
   })
 }
 ```
+
 As you can see by the JSON response that we get from the API, the above code is simply assigning each bit of data retrieved from the API to the variables declared in the `data` object in Vue, this will allow us to use the data everywhere in the app.
 
-
-Notice that we are adding something to some variables. 
+Notice that we are adding something to some variables.
 
 In the `icon` variable we add the path for the images folder, the file name and file extension. When Vue runs it will change the `src` of the image to whatever the value inside `icon` is.
 
 For the file name, we will slice the string that we get from the API from the char located on index 0 up to char at index 2 - this is because OpenWeatherMap changes the icon name depending on if it is day or night.
 
 The `sunrise` and `sunset` times are given in Unix epoch time, so we just convert the time to a human-readable format and then slice the string in order to get only the hours and minutes.
-
 
 Your `main.js` file and the Vue app should look like this now:
 
@@ -422,7 +411,7 @@ let weatherApp = new Vue({
     pressure: '',
     humidity: '',
     wind: '',
-    overcast: '', 
+    overcast: '',
     icon: ''
   },
   methods: {
@@ -455,7 +444,7 @@ let weatherApp = new Vue({
 
 Replace `{Your API Key}` with the API key that you obtained from OpenWeatherMap and reload the page, you should see the app with the current weather data now.
 
-## Conclusion
+# Conclusion
 
 This post was rather long, I would like to first thank you for sticking up with it. I hope you learned how to use axios and Vue together to get data from an API. I would like now to ask you if you would like something to be explained more clearly or if you would like me to explain something else.
 
