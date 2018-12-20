@@ -5,7 +5,7 @@ subtitle: How to fix git conflicts
 author: "FabioRosado"
 date:   2017-10-19 14:00:02 +0100
 categories: GitHub
-category_icon:  <i class="fa fa-code-fork" aria-hidden="true"></i>
+category_icon: <i class="fas fa-code-branch"></i>
 image: gitconflict.jpg
 excerpt: Usually a conflict happens when the project was updated but your local repository is out of sync. So when you try to push changes on a file that someone already changed a conflicting message will show so you can choose which version is the right version to use.
 

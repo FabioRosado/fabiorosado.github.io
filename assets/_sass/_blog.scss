@@ -1,0 +1,24 @@
+.page-header {
+  background-image: url(../assets/images/blog.jpg);
+  background-size: cover;
+  background-color: black;
+  @include desktop {
+    padding: 10rem;
+  }
+
+  h1 {
+    font-size: 80px;
+    text-align: center;
+    color: color(secondary-color);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.10);
+  }
+}
+.blog-container {
+  margin: 2rem;
+  display: grid;
+  grid-gap: 1rem;
+  @include desktop {
+    margin: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

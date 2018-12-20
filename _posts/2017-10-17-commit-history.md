@@ -5,7 +5,7 @@ subtitle: How to keep it under control
 author: "FabioRosado"
 date:   2017-10-11 10:01:02 +0100
 categories: GitHub
-category_icon:  <i class="fa fa-code-fork" aria-hidden="true"></i>
+category_icon: <i class="fas fa-code-branch"></i>
 image: commits.jpg
 excerpt: 
 ---

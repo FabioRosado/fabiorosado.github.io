@@ -44,10 +44,12 @@
 }
 
 .text-container {
-  margin: 0rem 4rem 0rem 4rem;
+  padding: 1rem;
+  margin: 0rem 1rem 0rem 1rem;
   background-color: white;
   border-radius: 10px;
   @include desktop {
+    margin: 0rem 4rem 0rem 4rem;
     padding: 4rem 11rem 3rem 11rem;
   }
   h1 {
@@ -64,15 +66,26 @@
     &:first-letter {
       float: left; 
       color: color(secondary-color); 
-      font-size: 60px;
-      line-height: 50px;
+      font-size: 45px;
+      line-height: 43px;
       padding-top: 4px;
       padding-right: 8px;
       padding-left: 3px;
+      @include desktop {
+        font-size: 60px;
+        line-height: 50px;
+        padding-top: 4px;
+        padding-right: 8px;
+        padding-left: 3px;
+      }
     }
   }
 }
 
 .larger {
   font-size: 3em;
+}
+
+#disqus_thread{
+  margin: 0rem 1rem 0rem 1rem;
 }
