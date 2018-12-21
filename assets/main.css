@@ -571,7 +571,7 @@ nav #collapseBtn .icon-bar {
 .post-card .description {
   visibility: hidden;
   position: absolute;
-  top: 13%;
+  top: 10%;
   text-align: center;
   margin: 0rem 1rem 1rem 1rem;
 }
@@ -872,6 +872,13 @@ footer .navigation .horizontal-list {
   }
 }
 
+p, ul {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+}
+
 /**
 * Code Formatting
 */
@@ -904,6 +911,7 @@ pre > code {
 .highlight {
   background: #fff;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .highlighter-rouge .highlight {

@@ -1,3 +1,4 @@
+$padding-unit: 1.5rem;
 /**
 * Code Formatting
 */
@@ -30,6 +31,7 @@ pre {
 .highlight {
   background: #fff;
   margin-bottom: $spacing-unit / 1.5;
+  margin-top: $spacing-unit / 1.5;
 
   .highlighter-rouge & {
     background: #edfbff;
