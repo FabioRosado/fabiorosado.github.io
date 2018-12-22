@@ -6,17 +6,14 @@ author: "FabioRosado"
 date:   2018-02-17 18:10:02
 categories: Code
 category_icon:  <i class="fa fa-code" aria-hidden="true"></i>
-image: galymzhan-abdugalimov-181.jpg
+image: josh-riemer-729194-unsplash.jpg
 excerpt: A problem that I have encountered while working on a Pybites challenge, libraries used and how I have optimized the tweets classifier to be faster.
 ---
 [Pybites challenge 07](https://pybit.es/codechallenge07.html) challenges us to create a sentiment analysis script that takes tweets related to a term and does some analysis in order to give us a positive/negative percentage of the general opinion of a term.
 
 Since I was learning how to best user NLTK I have decided to use this library for the challenge. Working on this project was quite fun and I have learned quite a lot. In this post, I will show you I will tell you about my mistakes, how I worked around them and how to improve the classifier speed training.
 
-&nbsp;
 # Problem: Training the classifier on every tweet
------
-&nbsp;
 
 My first mistake was running the method that trains the classifier on every tweet received. So if there are 2,000 tweets to analyse and each training takes 1 minute (it's more than that), it will take ages until you get the score of the term that you searched.
 
@@ -24,10 +21,7 @@ I didn't save this code but basically, I created a single function that did two 
 
 Imagine scrapping 1,000 tweets and training the classifier on every single one of them in order to get the classification. This was a huge time sink and bad approach to the problem since the classifier data didn't change, it should be trained only once and that's it.
 
-&nbsp;
 # Solution: initializing the classifier on __init__
------
-&nbsp;
 
 The solution was obvious - train the classifier once and be done with it.
 
@@ -37,10 +31,7 @@ After experimenting a bit with the code, I've decided to try to initialize the m
 
 This speeded up the classification of 1000 tweets by a lot, but there is still room for improvement after all, the training data is still unchanged at this point. I had to come up with some way to optimize this process somehow.
 
-&nbsp;
 # Optimization: using pickle to save/load classifier
------
-&nbsp;
 
 The only way to optimize the classifier and make it blazing fast would be to train it once, save the trained classifier somehow and use it in all other future terms that we wish to classify.
 
@@ -60,14 +51,9 @@ Pickling a class method is as simple and doing `pickle.dump()`  on the method th
             return pickle.load(loaded_classifier)
 ```
 
-
 These were the two methods that I added to the `TweetsClassifier` class in order to call them on every run of the program.
 
-
-&nbsp;
 # Final thoughts
------
-&nbsp;
 
 This was my first attempt at creating a classifier and my decision to just use the NLTK library probably made the program run a little bit slower than if I had opted for other libraries which use vectors in order to train and classify the data.
 

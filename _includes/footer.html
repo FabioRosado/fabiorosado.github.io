@@ -1,87 +1,23 @@
-<footer class="footer navbar-fixed-bottom">
-    <div class="container-fluid">
-        <div class="row center-sm-text">
-            <div class="col-sm-2">
-                <img class="footer-logo" src="{{site.url}}/assets/images/logo.svg" width="100" height="100" alt="{{ site.title }}">
-            </div>
-            <div class="col-sm-3">
-                <h5 class="footer-title drop-shadow">Pages</h5>
-                 <ul class="footer-link">
-                     <li><a href="/">Home</a></li>
-                    {% for link in site.pages | limit:6 %}
-                        {% if link.title != None %}
-                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-sm-4">
-                <h5 class="footer-title drop-shadow">Latest Posts</h5>
-                <ul class="footer-link">
-                    {% assign count_posts = 0 %}
-                    {% for link in site.posts%}
-                        {% if count_posts >= 4 %}
-                            {% break %}
-                        {% elsif link.url contains "projects" %}
-                        {% else %}
-                            {% assign count_posts = count_posts | plus: 1 %}
-                            <li><a href="{{ link.url }}"> {{ link.title }} </a></li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <h5 class="footer-title drop-shadow">Contact</h5>
-                <ul class="footer-link">
-                    <li>{{ site.footer_text }}</li>
-                    <li><a href="mailto:{{ site.email }}"><i class="fa fa-envelope" aria-hidden="true"></i> {{ site.email }}</a></li>
-                        {% if site.github_username %}
-                            <li class="social-media">
-                                <a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github"></i></a>
-                            </li>
-                        {% endif %}
-                        {% if site.twitter_username %}
-                            <li class="social-media">
-                                <a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i></a>
-                            </li>
-                        {% endif %}
-                        {% if site.medium_username %}
-                            <li class="social-media">
-                                <a href="https://medium.com/@{{ site.medium_username }}"><i class="fa fa-medium"></i></a>
-                            </li>
-                        {% endif %}
-                        {% if site.facebook_username %}
-                            <li class="social-media">
-                                <a href="https://www.facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            {% endif %}
-                        {% if site.instagram_username %}
-                            <li class="social-media">
-                                <a href="https://www.instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a>
-                            </li>
-                        {% endif %}
-                        {% if site.linkedin_username %}
-                            <li class="social-media">
-                                <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        {% endif %}
-                </ul>
-            </div>
-        </div>
-        <div class="row bottom-footer">
-            <div class="col-sm-6 d-none d-md-block footer-link">
-                Made with <i class="fa fa-heart"></i> using <a href="http://jekyllrb.com/">Jekyll</a>
-            </div>
-            <div class="col-sm-6 d-none d-md-block footer-link" align="right">
-                <a href="https://github.com/fabiorosado/fabiorosado.github.io/"><i class="fa fa-code"></i> on Github &nbsp;<i class="fa fa-github-alt"></i></a>
-            </div>
-            <div class="d-sm-none footer-link">
-                &emsp; Made with <i class="fa fa-heart"></i> using <a href="http://jekyllrb.com/">Jekyll </a> &emsp; <a href="https://github.com/fabiorosado/fabiorosado.github.io/"><i class="fa fa-code"></i> on Github &nbsp;<i class="fa fa-github-alt"></i></a>
-            </div>
-        </div>
-    </div>
+<footer>
+  <div class="made-by">
+    Made with <i class="fas fa-heart"></i> by FabioRosado <a href="" target="_blank"><i class="fas fa-code"></i> on GitHub</a>
+  </div>
+  <div class="navigation">
+    <ul class="horizontal-list">
+      <li>
+        <a href="{{site.url}}">Home</a>
+      </li>
+      <li>
+          <a href="{{site.url}}/#about">About</a>
+        </li>
+      {% for link in site.pages %}
+        {% if link.title != None %}
+        <li>
+          <a href="{{link.url}}">{{link.title}}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
 </footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a3aa26d0c3a12001239dfa6&product=inline-share-buttons"></script>

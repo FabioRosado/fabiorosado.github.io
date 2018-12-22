@@ -5,7 +5,7 @@ subtitle: How to fix git conflicts
 author: "FabioRosado"
 date:   2017-10-19 14:00:02 +0100
 categories: GitHub
-category_icon:  <i class="fa fa-code-fork" aria-hidden="true"></i>
+category_icon: <i class="fas fa-code-branch"></i>
 image: gitconflict.jpg
 excerpt: Usually a conflict happens when the project was updated but your local repository is out of sync. So when you try to push changes on a file that someone already changed a conflicting message will show so you can choose which version is the right version to use.
 
@@ -13,7 +13,7 @@ excerpt: Usually a conflict happens when the project was updated but your local 
 
 So you just tried to pull changes from a remote repository and git presents you with the message: 
 
-```
+```shell
 CONFLICT (content): Merge conflict in <filename>
 Automatic merge failed; fix conflicts and then commit the result.
 ```
@@ -22,35 +22,27 @@ From this message, you know that the automatic merge failed, that you need to fi
 
 But what does all of this mean?
 
-
-&nbsp;
 # Reason for conflicts to happen
------
-&nbsp;
 
 Usually, a conflict happens when the project was updated but your local repository is out of sync. So when you try to push changes on a file that someone already changed, a conflicting message will show, so you can choose which version is the right version to use.
 
 Let's say that you have the following file:
 
 ```python
-
+# hello
 def hello():
     """Prints Hello"""
-    print("Hello") 
+    print("Hello")
 
 ```
 
 Then someone comes and changes the file, but since you haven't pulled the changes from the main repository, these changes won't show up in your local repository. 
 
-Then you decide to change this example function to print the traditional "Hello World". But when you try to push the changes to the main repository you get the message that a conflict happened in the hello.py file. 
+Then you decide to change this example function to print the traditional "Hello World". But when you try to push the changes to the main repository you get the message that a conflict happened in the hello.py file.
 
 Let's open the file and inspect the problem.
 
-
-&nbsp;
 # The conflicting file
------
-&nbsp;
 
 When you open the hello.py file you notice that there are some strange things in the hello function.
 
@@ -65,10 +57,9 @@ def hello():
 
 ```
 
-
 At first, this might seem a bit strange, but it's quite easy to understand. Basically, git is telling you that the HEAD of the main repository is showing the following:
 
-```
+```python
 <<<<<<< HEAD
     """Prints Hello Everyone!"""
     print("Hello Everyone!")
@@ -77,23 +68,18 @@ At first, this might seem a bit strange, but it's quite easy to understand. Basi
 But your own repository has the following changes:
 
 
-```
+```python
 =======
     """Prints Hello World!"""
     print("Hello World!")
 
 ```
 
-As you can see, git is an amazing tool and it will tell you about issues before trying to do something. This conflict warning is asking you to check the differences between the two versions and choose which one do you want to use. 
+As you can see, git is an amazing tool and it will tell you about issues before trying to do something. This conflict warning is asking you to check the differences between the two versions and choose which one do you want to use.
 
-
-&nbsp;
 # Fixing the conflict
------
-&nbsp;
 
-Fixing the conflict is quite easy, all you need to do is delete the version that you don't want to use together with the `<<<<<<< HEAD` and `=======` markers. In the hello.py file you know that we should be printing "Hello World!" as per tradition, so you decide that your version is the correct version. 
-
+Fixing the conflict is quite easy, all you need to do is delete the version that you don't want to use together with the `<<<<<<< HEAD` and `=======` markers. In the hello.py file you know that we should be printing "Hello World!" as per tradition, so you decide that your version is the correct version.
 
 ```python
 def hello():

@@ -10,13 +10,13 @@ tags: Featured
 image: testlogging.jpg
 excerpt: This is an example on how to use the side_effect function from the unittest module to test if the aiohttp exception ClientOSError was raised. 
 ---
-One of the issues of opsdroid was to bump the test coverage of the parsers.  Aiohttp is used to connect to the different API's  and a `ClientOSError` exception is raised, when the client fails to connect to the parser API. 
+One of the issues of opsdroid was to bump the test coverage of the parsers.  Aiohttp is used to connect to the different API's  and a `ClientOSError` exception is raised, when the client fails to connect to the parser API.
 
-I've decided to take on the task to find a way to test these two lines of code that everyone seems to be having issues with. 
+I've decided to take on the task to find a way to test these two lines of code that everyone seems to be having issues with.
 
 After doing a bunch of reading and trying different ways to raise the exception, I've finally come to this idea that perhaps mocking a failed connection could work.
 
-From the unit test documentation, the `side_effect` method looked like something that could provide the answer. 
+From the unit test documentation, the `side_effect` method looked like something that could provide the answer.
 
 _side_effect allows you to perform side effects, including raising an exception when a mock is called -- [Unit Test Documentation](https://docs.python.org/3/library/unittest.mock.html)_
 

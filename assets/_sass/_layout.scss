@@ -1,0 +1,186 @@
+// Constant classes
+
+.visible-xs {
+  @include desktop{
+    display: none;
+  }
+}
+
+.hidden-xs {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
+.horizontal-list {
+  list-style-type: none;
+  display: flex;
+  padding-top: 1rem;
+
+  li {
+    padding-right: $spacing-unit / 2;
+  }
+}
+
+.full-button {
+  cursor: pointer;
+  background-color: color(secondary-color);
+  color: color(primary-color);
+  font-family: $base-font-family;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: medium;
+  transition: background-color 0.5s ease-out;
+}
+
+.full-button:hover {
+  background-color: lighten(color(secondary-color), 7%);
+  color: lighten(color(primary-color), 7%);
+  transition: background-color 0.5s ease-out;
+}
+
+.trans-button {
+  cursor: pointer;
+  color: color(secondary-color);
+  font-family: $base-font-family;
+  border: 1px solid color(secondary-color);
+  border-radius: 5px;
+  padding: 8px;
+  transition: background-color 0.5s ease-out;
+}
+
+.trans-button:hover {
+  background-color: color(secondary-color);
+  color: color(primary-color);
+  transition: background-color 0.5s ease-out;
+  .fab {
+    color: color(primary-color);
+  }
+}
+
+.white-button {
+  cursor: pointer;
+  color: color(primary-color);
+  background: color(text-color-light);
+  font-family: $base-font-family;
+  font-size: medium;
+  border: 1px solid color(text-color-light);
+  border-radius: 5px;
+  padding: 8px;
+  transition: background-color 0.5s ease-out;
+}
+
+.white-button:hover {
+  cursor: pointer;
+  color: color(primary-color);
+  background: color(secondary-color);
+  font-family: $base-font-family;
+  font-size: small;
+  border: 1px solid color(secondary-color);
+  border-radius: 5px;
+  padding: 8px;
+  transition: background-color 0.5s ease-out;
+  @include desktop {
+    font-size: medium;
+  }
+}
+
+.fab {
+  color: color(secondary-color);
+  transition: background-color 0.5s ease-out;
+}
+.fab:hover {
+  color: lighten(color(secondary-color), 5%);
+  transition: background-color 0.5s ease-out;
+}
+
+.three-columns {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 3rem;
+  @include desktop {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.four-by-four {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  @include desktop {
+    grid-gap: .5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repear(2, 1fr);
+  }
+}
+
+.margin-bottom {
+  margin-bottom: $padding-unit;
+}
+
+.margin-top {
+  margin-top: $padding-unit;
+}
+
+.padding-bottom {
+  padding: $padding-unit;
+}
+
+.margin-left {
+  @include desktop {
+    margin-left: 1rem;
+  }
+}
+
+.section {
+  margin: 4rem 3rem 3rem 3rem;
+  @include desktop {
+    margin: 6rem 3rem 3rem 3rem;
+  }
+}
+
+.container-middle {
+  margin-bottom: 3rem;
+  @include desktop {
+    margin: 0rem 10rem 5rem 10rem;
+  }
+}
+
+
+.primary-background {
+  background-color: color(primary-color);
+}
+
+/************************************
+*     Anything Related to Fonts!    *
+************************************/
+
+.center-text {
+  @include desktop {
+    text-align: center;
+  }
+}
+
+.small-font {
+  font-size: $small-font-size;
+}
+
+.spaced-text {
+  word-spacing: 15px;
+}
+
+.white-text {
+  color: color(text-color-light);
+}
+
+.grey-text {
+  color: color(text-color-grey);
+}
+
+.drop-shadow {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.10);
+}

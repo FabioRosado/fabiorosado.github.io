@@ -6,6 +6,8 @@ categories: Projects
 tag: Voice Controlled
 tag-icon: <i class="fa fa-microphone" aria-hidden="true"></i>
 image: audiotodo.jpg
+source: https://github.com/opsdroid/skill-words
+tech: Python SpeechRecognition
 excerpt: A To-Do List controlled by voice commands that keeps track of unfinished items on a simple txt file.
 
 ---
@@ -15,10 +17,7 @@ Initially I thought it would be an easy task. Slowly it became a bit more comple
 
 The decision to implement the To-Do List on a txt file was made simply because it allows the user to edit the file directly without the need of saying the commands out loud.
 
-&nbsp;
 # Overview
------
-&nbsp;
 
 - **The Good**
   - The commands are simple and easy to remember
@@ -32,9 +31,6 @@ The decision to implement the To-Do List on a txt file was made simply because i
   - There must be an internet connection for the recogniser to work
   - The loop will run forever. If no command is given the message `Sorry, I couldn't understand that command.` will be repeated over and over again.
 
-&nbsp;
 # Info
------
-&nbsp;
 
 GitHub repo: [https://github.com/FabioRosado/AudioToDoList/](https://github.com/FabioRosado/AudioToDoList/)

@@ -4,7 +4,7 @@ title:  Weather App - Using geolocation and Vue
 subtitle: Get the weather data from the user location
 date:   2018-09-04 18:38:00
 categories: Vue
-tag-icon: <i class="fab fa-vuejs"></i>
+category_icon: <i class="fab fa-vuejs"></i>
 image: weatherApp.jpg
 excerpt: Learn how to implement HTML5 Geolocation API and VueJs together to get the current location of an user.
 ---
@@ -160,7 +160,7 @@ let weatherApp = new Vue({
     pressure: '',
     humidity: '',
     wind: '',
-    overcast: '', 
+    overcast: '',
     icon: '',
     location: ''
   },

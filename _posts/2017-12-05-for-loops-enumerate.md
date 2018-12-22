@@ -7,21 +7,17 @@ date:   2017-12-05 20:00:02 +0000
 categories: Python
 category_icon:  <i class="fa fa-code" aria-hidden="true"></i>
 image: enumerate.jpg
-excerpt: 
+excerpt: The enumerate built-in function it's a great way to iterate over something. Your code will be more readable and you have some flexibility when looping.
 ---
-The enumerate built-in function it's a great way to iterate over something. Your code will be more readable, but you have some flexibility when building a loop. You can use enumerate in any sequence, iterator or another object that supports iteration.
+The enumerate built-in function it's a great way to iterate over something. Your code will be more readable and you have some flexibility when building a loop. You can use enumerate in any sequence, iterator or another object that supports iteration.
 
 Instead of writing a loop like this `for i in range(len(foo))` to get the index of `foo` a better way would be to use the enumerate, because this function returns the index and value of `foo`. 
 
-
-&nbsp;
 # Using Enumerate in a Loop
------
-&nbsp;
 
 Using enumerate in a loop is quite easy. You can either pass one or two variables to the for loop and then wrap the thing you want to loop over with the `enumerate()` function.
 
-The difference between passing one or two variables is the result returned to you. If you pass one variable, you'll get a tuple. If you pass two variables, you'll get an `int` containing the index number and the value. 
+The difference between passing one or two variables is the result returned to you. If you pass one variable, you'll get a tuple. If you pass two variables, you'll get an `int` containing the index number and the value.
 
 So a loop can be written with a single variable like this:
 `for i in enumerate(foo)`
@@ -35,10 +31,7 @@ Or you can pass two variables into the loop like this:
 You will get the following two values:
 `1 'bar'`
 
-&nbsp;
 # Basic Example
------
-&nbsp;
 
 Now that you know, what you will get, if you pass one or two variables to a for loop, let's see an example where `enumerate()` is used.
 
@@ -51,7 +44,7 @@ Next, you want to know the index of every name, so you can do something with it.
 ```python
 for name in enumerate(names):
     print(name)
-    
+
 (0, 'John')
 (1, 'Leah')
 (2, 'Bob')
@@ -78,10 +71,8 @@ for index, name in enumerate(names):
 
 As you can see, you could use two variables, if you want more flexibility and make your code more readable.
 
-&nbsp;
 # Example: Hamming difference between two DNA strands
------
-&nbsp;
+
 _Disclaimer: This part contains my solution of the hamming problem found on exercism.io_
 
 This example is taken from one of the many exercises, that you can get from [exercism.io](http://exercism.io/). I recommend you to check it, as the challenges are pretty awesome and fun to complete!
@@ -118,14 +109,14 @@ def test_disallow_first_strand_longer(self):
         hamming.distance("AATG", "AAA")
 ```
 
-&nbsp;
-#### Solving the problem
+## Solving the problem
 
 To solve this issue we will need:
+
 - A place to add up all the different occurrences between two strings
 - A test to see if the two strings are the same length
 - A loop to test the two indexes together
-    
+
 Now that we have all the tools needed, building the function is pretty easy. 
 
 ```python

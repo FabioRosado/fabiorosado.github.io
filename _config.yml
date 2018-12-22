@@ -24,8 +24,6 @@ author: FabioRosado
 # Analytics
 google_analytics: UA-109089626-1
 
-# Footer Contact Area
-footer_text: Please feel free to contact me. <br> I'm always happy to chat!
 
 # Social Media Usernames
 github_username:  FabioRosado
@@ -33,6 +31,7 @@ twitter_username: FabioRosado_
 instagram_username: FabioRosado
 linkedin_username: fabiorosado
 disqus_username: FabioRosado
+dev_username: fabiorosado
 
 # Blog Categories
 default_icon: <i class="fa fa-asterisk" aria-hidden="true"></i>

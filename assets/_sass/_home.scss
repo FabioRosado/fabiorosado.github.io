@@ -1,0 +1,197 @@
+.about-card {
+  background-color: color(primary-color);
+  color: color(secondary-color);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  h2 {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.project-card {
+  color: color(secondary-color);
+  background-color: color(primary-color);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+
+  .project-image {
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    opacity: .8;
+    transition:opacity .5s ease-out;
+  }
+
+  .category {
+    position: absolute;
+    right: 0;
+    color: color(primary-color);
+    background-color: color(secondary-color);
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 0px 10px 0px 10px;
+  }
+
+  .project-name {
+    visibility: visible;
+    position: absolute;
+    top: 34%;
+    margin-left: 25%;
+    margin-right: 3rem;
+    text-shadow: 1px 1px 2px color(primary-color);
+  }
+
+  .description {
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 20%;
+  }
+  .buttons {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 51%;
+    left: 7%;
+    font-size: medium;
+    @include desktop {
+      left: 12%;
+    }
+  }
+
+  .tools-used {
+    margin: 1rem 0rem 1.5rem 0rem;
+    background-color: color(primary-color);
+    text-align: center;
+  }
+}
+
+.project-card:hover {
+  img {
+    opacity: .3;
+    transition:all .5s ease-out;
+  }
+  .project-name {
+    visibility: hidden;
+  }
+  .description {
+    visibility: visible;
+  }
+  .buttons {
+    visibility: visible;
+  }
+}
+
+.post-card {
+  color: color(secondary-color);
+  background-color: color(primary-color);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+
+  .post-image {
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    opacity: .8;
+  }
+
+  .description {
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    margin: 0rem 1rem 1rem 1rem;
+  }
+
+  .card-title {
+    position: absolute;
+    bottom: 0;
+    margin: 0rem 1rem 1rem 1rem;
+
+    .category {
+      background-color: color(secondary-color);
+      color: color(primary-color);
+      font-family: $base-font-family;
+      border: 0;
+      border-radius: 5px;
+      padding: 5px;
+      font-size: small;
+    }
+
+    .fab {
+      color: color(primary-color);
+    }
+
+    h4 {
+      margin-top: .5rem;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.post-card:hover {
+  .post-image {
+    opacity: .3;
+    overflow: hidden;
+    transition: all .5 ease-in-out;
+  }
+  .description {
+    visibility: visible;
+    transition: all .5 ease-in-out;
+  }
+  .card-title {
+    visibility: hidden;
+    transition: all .5 ease-in-out;
+  }
+}
+
+.contact-area {
+  color: color(text-color-light);
+  background-image: url(../assets/images/annie-spratt-608001-unsplash.jpg);
+  background-size: cover;
+  margin-top: 4rem;
+  @include desktop {
+    margin-top: 6rem;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: $cursive-font;
+    color: color(text-color-light);
+    margin-bottom: 1rem;
+  }
+
+  .contact-text {
+    padding: 2rem;
+    margin-right: 0rem;
+    @include desktop {
+      padding: 4rem;
+      margin-right: 31%;
+      margin-left: 31%;
+      text-align: justify;
+    }
+    .fab {
+      color: color(text-color-light);
+    }
+
+    .fab:hover {
+      color: color(secondary-color);
+      transition: color 0.5s ease-out;
+    }
+    .horizontal-list {
+      padding-top: 2rem;
+    }
+  }
+}
