@@ -111,7 +111,6 @@ nav {
   .navigation {
     display: none;
     list-style-type: none;
-    padding-top: .5rem;
     @include desktop {
       display: block;
     }

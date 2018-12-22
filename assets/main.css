@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
+  color: #FF721E;
 }
 
 @media (min-width: 1160px) {
@@ -392,7 +393,6 @@ nav {
 nav .navigation {
   display: none;
   list-style-type: none;
-  padding-top: .5rem;
 }
 
 @media (min-width: 1160px) {
@@ -714,6 +714,7 @@ footer .navigation {
   footer .navigation {
     position: absolute;
     right: 0;
+    margin-top: -1rem;
   }
 }
 
