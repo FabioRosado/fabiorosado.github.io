@@ -804,6 +804,10 @@ footer .navigation .horizontal-list {
   color: #1E2A39;
 }
 
+.text-container ul {
+  padding-left: 3rem;
+}
+
 .text-container p:first-of-type:first-letter {
   float: left;
   color: #FF721E;

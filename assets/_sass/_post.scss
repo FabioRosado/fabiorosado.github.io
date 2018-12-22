@@ -63,6 +63,10 @@
     color: color(primary-color);
   }
 
+  ul {
+    padding-left: 3rem;
+  }
+
   p:first-of-type {
     &:first-letter {
       float: left; 
