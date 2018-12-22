@@ -12,6 +12,7 @@
                     {% for project in site.categories.Projects limit: 3%}  
             
                     <div class="project-card drop-shadow">
+                        <a href="{{project.url}}">
                         <div class="category small-font">
                             {{ project.tag-icon }} {{ project.tag }}
                         </div>
@@ -32,6 +33,7 @@
                             <p>{{ project.tech }}</p>
                         </div>
                         </div>
+                        </a>
                     {% endfor %}
                 </div>
         </div>
