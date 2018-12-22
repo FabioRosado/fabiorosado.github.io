@@ -297,13 +297,13 @@ The API will return all of these details so we don't need to do much. Inside our
 
 The data object inside our VueJs will look like this:
 
-```js
+```
 data: {
   currentTemp: '',
   minTemp: '',
-  maxTemp:'',
+  maxTemp: '',
   sunrise: '',
-  sunset: '',
+  sunset:'',
   pressure: '',
   humidity: '',
   wind: '',

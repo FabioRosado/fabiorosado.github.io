@@ -13,7 +13,7 @@ excerpt: Usually a conflict happens when the project was updated but your local 
 
 So you just tried to pull changes from a remote repository and git presents you with the message: 
 
-```
+```shell
 CONFLICT (content): Merge conflict in <filename>
 Automatic merge failed; fix conflicts and then commit the result.
 ```
@@ -29,7 +29,7 @@ Usually, a conflict happens when the project was updated but your local reposito
 Let's say that you have the following file:
 
 ```python
-
+# hello
 def hello():
     """Prints Hello"""
     print("Hello")
@@ -59,7 +59,7 @@ def hello():
 
 At first, this might seem a bit strange, but it's quite easy to understand. Basically, git is telling you that the HEAD of the main repository is showing the following:
 
-```
+```python
 <<<<<<< HEAD
     """Prints Hello Everyone!"""
     print("Hello Everyone!")
@@ -68,7 +68,7 @@ At first, this might seem a bit strange, but it's quite easy to understand. Basi
 But your own repository has the following changes:
 
 
-```
+```python
 =======
     """Prints Hello World!"""
     print("Hello World!")
