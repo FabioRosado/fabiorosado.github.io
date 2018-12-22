@@ -458,12 +458,16 @@ nav #collapseBtn .icon-bar {
   background-color: #1E2A39;
   color: #FF721E;
   border-radius: 10px;
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
 }
 
 .about-card h2 {
   padding: 1rem 0rem 1rem 0rem;
+}
+
+.about-card p {
+  margin: 0;
 }
 
 .project-card {

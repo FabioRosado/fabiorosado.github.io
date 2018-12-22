@@ -2,10 +2,13 @@
   background-color: color(primary-color);
   color: color(secondary-color);
   border-radius: 10px;
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
   h2 {
     padding: 1rem 0rem 1rem 0rem;
+  }
+  p {
+    margin: 0;
   }
 }
 
