@@ -721,6 +721,10 @@ footer .navigation .horizontal-list {
   padding-top: 0;
 }
 
+.blog-post {
+  overflow-x: hidden;
+}
+
 .blog-post .image-container {
   width: 100%;
 }
@@ -882,24 +886,37 @@ p, ul {
 /**
 * Code Formatting
 */
-pre,
 code {
-  color: #3d5ce5;
-  border: 1px solid grey;
+  padding: 1px 6px;
+  color: #164b78;
+  border: 1px solid #c2c6cc;
   border-radius: 3px;
-  background-color: #edfbff;
-}
-
-code {
-  padding: 1px 5px;
+  background-color: #e7e9ee;
 }
 
 pre {
-  padding: 8px 12px;
+  border: 1px solid #57606B;
+  border-radius: 3px;
+  background-color: #1E2A39;
+  padding: 2rem;
   overflow-x: auto;
+  position: relative;
+  margin-right: -2rem;
+  margin-left: -3rem;
+  font-size: large;
+}
+
+@media (min-width: 1160px) {
+  pre {
+    padding-left: 16rem;
+    margin-left: -51vw;
+    left: 50%;
+  }
 }
 
 pre > code {
+  color: #ebeef2;
+  background-color: #1E2A39;
   border: 0;
   padding-right: 0;
   padding-left: 0;
@@ -909,17 +926,12 @@ pre > code {
  * Syntax highlighting styles
  */
 .highlight {
-  background: #fff;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
-.highlighter-rouge .highlight {
-  background: #edfbff;
-}
-
 .highlight .c {
-  color: #b0ddf2;
+  color: #7898a7;
   font-style: italic;
 }
 
@@ -929,12 +941,12 @@ pre > code {
 }
 
 .highlight .k {
-  color: #7941f2;
+  color: #00beff;
   font-weight: bold;
 }
 
 .highlight .o {
-  color: #3d5ce5;
+  color: #ff2b99;
   font-weight: bold;
 }
 
@@ -960,12 +972,12 @@ pre > code {
 }
 
 .highlight .gd {
-  color: #000;
+  color: #f24161;
   background-color: #fdd;
 }
 
 .highlight .gd .x {
-  color: #000;
+  color: #f24161;
   background-color: #faa;
 }
 
@@ -982,21 +994,21 @@ pre > code {
 }
 
 .highlight .gi {
-  color: #000;
+  color: #3f5878;
   background-color: #dfd;
 }
 
 .highlight .gi .x {
-  color: #000;
+  color: #3f5878;
   background-color: #afa;
 }
 
 .highlight .go {
-  color: #888;
+  color: #b6d1f9;
 }
 
 .highlight .gp {
-  color: #555;
+  color: #b6d1f9;
 }
 
 .highlight .gs {
@@ -1020,6 +1032,7 @@ pre > code {
 }
 
 .highlight .kd {
+  color: #cc5fff;
   font-weight: bold;
 }
 
@@ -1028,11 +1041,12 @@ pre > code {
 }
 
 .highlight .kr {
+  color: #cc5fff;
   font-weight: bold;
 }
 
 .highlight .kt {
-  color: #458;
+  color: #98b2ff;
   font-weight: bold;
 }
 
@@ -1041,19 +1055,19 @@ pre > code {
 }
 
 .highlight .s {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .n {
-  color: #00405f;
+  color: #fac85b;
 }
 
 .highlight .na {
-  color: #008080;
+  color: #00d55f;
 }
 
 .highlight .nb {
-  color: #0086B3;
+  color: #00d55f;
 }
 
 .highlight .nc {
@@ -1066,11 +1080,15 @@ pre > code {
 }
 
 .highlight .no {
-  color: #008080;
+  color: #04cccc;
+}
+
+.highlight .nx {
+  color: #fac85b;
 }
 
 .highlight .ni {
-  color: #800080;
+  color: #ff91ff;
 }
 
 .highlight .ne {
@@ -1079,7 +1097,7 @@ pre > code {
 }
 
 .highlight .nf {
-  color: #f241ba;
+  color: #41f2d1;
   font-weight: bold;
 }
 
@@ -1088,11 +1106,11 @@ pre > code {
 }
 
 .highlight .nt {
-  color: #000080;
+  color: #00beff;
 }
 
 .highlight .nv {
-  color: #008080;
+  color: #00d4d4;
 }
 
 .highlight .ow {
@@ -1105,43 +1123,43 @@ pre > code {
 }
 
 .highlight .mf {
-  color: #099;
+  color: #00caca;
 }
 
 .highlight .mh {
-  color: #099;
+  color: #00caca;
 }
 
 .highlight .mi {
-  color: #41f2d1;
+  color: #cce9ff;
 }
 
 .highlight .mo {
-  color: #099;
+  color: #00caca;
 }
 
 .highlight .sb {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .sc {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .sd {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .s2 {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .se {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .sh {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .si {
@@ -1149,7 +1167,7 @@ pre > code {
 }
 
 .highlight .sx {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .sr {
@@ -1157,7 +1175,7 @@ pre > code {
 }
 
 .highlight .s1 {
-  color: #45C3FF;
+  color: #ebeef2;
 }
 
 .highlight .ss {
@@ -1165,22 +1183,26 @@ pre > code {
 }
 
 .highlight .bp {
-  color: #0086B3;
+  color: #cc5fff;
 }
 
 .highlight .vc {
-  color: #008080;
+  color: #00d4d4;
 }
 
 .highlight .vg {
-  color: #008080;
+  color: #00d4d4;
 }
 
 .highlight .vi {
-  color: #008080;
+  color: #00d4d4;
 }
 
 .highlight .il {
-  color: #099;
+  color: #00caca;
+}
+
+.highlight .p {
+  color: #ebeef2;
 }
 /*# sourceMappingURL=main.css.map */
