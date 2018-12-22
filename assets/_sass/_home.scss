@@ -49,11 +49,15 @@
 
   .description {
     visibility: hidden;
-    text-align: center;
+    text-align: justify;
     position: absolute;
     margin-left: 10%;
     margin-right: 10%;
-    top: 20%;
+    top: 13%;
+    @include desktop {
+      top: 20%;
+      text-align: center;
+    }
   }
   .buttons {
     visibility: hidden;

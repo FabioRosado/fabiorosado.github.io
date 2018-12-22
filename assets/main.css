@@ -511,11 +511,18 @@ nav #collapseBtn .icon-bar {
 
 .project-card .description {
   visibility: hidden;
-  text-align: center;
+  text-align: justify;
   position: absolute;
   margin-left: 10%;
   margin-right: 10%;
-  top: 20%;
+  top: 13%;
+}
+
+@media (min-width: 1160px) {
+  .project-card .description {
+    top: 20%;
+    text-align: center;
+  }
 }
 
 .project-card .buttons {
