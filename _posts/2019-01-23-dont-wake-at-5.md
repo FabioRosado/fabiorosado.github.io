@@ -6,7 +6,7 @@ author: "FabioRosado"
 date:   2019-01-23 18:54:00
 categories: Productivity
 category_icon: <i class="fas fa-user-clock"></i>
-image: unittest.jpg
+image: carl-heyerdahl-181868-unsplash.jpg
 excerpt: Why you don't have to wake up at 5 am to be productive and what you should do to change your sleeping schedule
 ---
 For a very long time productivity gurus have been telling us that we should wake up at 4 or 5 am to be as productive as possible. Perhaps you have tried to wake up insanely early just to see if you could see an improvement in your productivity. If you did, do you remember what happened?
